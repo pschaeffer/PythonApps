@@ -1,0 +1,6 @@
+2023-06-09 12:06:25.233 [info] Running tunnel CLI
+2023-06-09 12:06:25.233 [info] status Spawning: c:\Users\pscha\AppData\Local\Programs\Microsoft VS Code\bin\code-tunnel.exe tunnel status
+2023-06-09 12:06:25.454 [info] no tunnel process is currently running
+
+2023-06-09 12:06:25.456 [info] status exit(23700): + 1 
+2023-06-09 12:06:25.457 [info] No other tunnel running
