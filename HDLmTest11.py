@@ -1,5 +1,6 @@
-from   HDLmUtility import *
-from   io          import BytesIO
+from   HDLmConfig     import *
+from   HDLmConfigInfo import *
+from   io             import BytesIO
 import argparse
 import json
 import pycurl
@@ -245,8 +246,12 @@ def main():
   wallTimeStart = time.time()   
   # Parse the arguments
   parser = parseArguments()
+  # Set some configuration values
+  HDLmConfig.setConfigValues()
   # Get the Open AI key
-  secretClient, glbApiKey = HDLmUtility.getSecretFromAws(None, 'OpenAiKey')
+  global glbApiKey
+  glbApiKey = HDLmConfigInfo.getOpenAIApiKey()
+
   # Generate some choices
   args = parser.parse_args()
   args.html = True

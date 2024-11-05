@@ -1,7 +1,8 @@
-from   HDLmAssert  import *
-from   HDLmUtility import *
-from   io          import BytesIO
-from   io          import StringIO
+from   HDLmAssert     import *
+from   HDLmConfig     import *
+from   HDLmConfigInfo import *
+from   io             import BytesIO
+from   io             import StringIO
 import json
 import pycurl
 import pymysql.cursors
@@ -126,26 +127,28 @@ def mySqlVersionCode(remoteHost, remoteUser, remotePassword, remoteDatabase):
 
 # This routine sets a bunch of new database global values
 def setNewDatabaseGlobals():
-  # Get the database globals as a dictionary. The database
-  # secrets are stored in AWS Secrets Manager.
-  databaseSecrets = HDLmUtility.getDatabaseSecretsFromAws()
   # Set some of the global values
-  glbNewRemoteDatabase = databaseSecrets['dbClusterIdentifier']
-  glbNewRemoteHost = databaseSecrets['host'] 
-  glbNewRemotePassword = databaseSecrets['password']
-  glbNewRemoteUser = databaseSecrets['username']
+  global glbNewRemoteDatabase
+  glbNewRemoteDatabase = HDLmConfigInfo.getEntriesDatabaseDatabaseNameTest()
+  global glbNewRemoteHost
+  glbNewRemoteHost = HDLmConfigInfo.getEntriesDatabaseDomainNameTest() 
+  global glbNewRemotePassword
+  glbNewRemotePassword = HDLmConfigInfo.getEntriesDatabasePassword()
+  global glbNewRemoteUser
+  glbNewRemoteUser = HDLmConfigInfo.getEntriesDatabaseUserid()
   return
 
 # This routine sets a bunch of old database global values
 def setOldDatabaseGlobals():
-  # Get the database globals as a dictionary. The database
-  # secrets are stored in AWS Secrets Manager.
-  databaseSecrets = HDLmUtility.getDatabaseSecretsFromAws()
   # Set some of the global values
-  glbOldRemoteDatabase = databaseSecrets['dbClusterIdentifier']
-  glbOldRemoteHost = databaseSecrets['host'] 
-  glbOldRemotePassword = databaseSecrets['password']
-  glbOldRemoteUser = databaseSecrets['username']
+  global glbOldRemoteDatabase
+  glbOldRemoteDatabase = HDLmConfigInfo.getEntriesDatabaseDatabaseNameProd()
+  global glbOldRemoteHost
+  glbOldRemoteHost = HDLmConfigInfo.getEntriesDatabaseDomainNameProd() 
+  global glbOldRemotePassword
+  glbOldRemotePassword = HDLmConfigInfo.getEntriesDatabasePassword()
+  global glbOldRemoteUser
+  glbOldRemoteUser = HDLmConfigInfo.getEntriesDatabaseUserid()
   return
     
 # Main program

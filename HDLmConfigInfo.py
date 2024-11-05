@@ -5,7 +5,10 @@ from HDLmConfig import *
 
 class HDLmConfigInfo(object):
   # print('In class HDLmConfigInfo')
-  # Build a configuration object
+  # Build a configuration object. This object 
+  # is used to get the configuration values.
+  # The configuration values are stored in a  
+  # dictionary that is a class variable.
   configObj = HDLmConfig()
   # Create a set of False values for use later
   falseValues = {
@@ -27,6 +30,18 @@ class HDLmConfigInfo(object):
     '1', 1,
     True
   }
+  # Get the AWS access key Id and return it to the caller. The    
+  # AWS access key Id is stored in the configuration values and
+  # is returned to the caller as a string. 
+  @classmethod
+  def getAwsAccessKeyId(cls):
+    return HDLmConfigInfo.configObj.getValue('awsAccessKeyId') 
+  # Get the AWS secret access key and return it to the caller.     
+  # The AWS secret access key Id is stored in the configuration
+  # values and is returned to the caller as a string. 
+  @classmethod
+  def getAwsSecretAccessKey(cls):
+    return HDLmConfigInfo.configObj.getValue('awsSecretAccessKey') 
   # Get the standard maximum number of clusters and return
   # it to the caller. The maximum number of clusters is
   # always returned to the caller as a proper number, not
@@ -154,6 +169,36 @@ class HDLmConfigInfo(object):
   @classmethod
   def getEntriesDatabaseContentSuffix(cls):
     return HDLmConfigInfo.configObj.getValue('entriesDatabaseContentSuffix') 
+  # Get the database name that is used to access the table that contains
+  # the production modifications. The database name is returned to the 
+  # caller as a string. The database name is stored in the configuration
+  # values. 
+  @classmethod
+  def getEntriesDatabaseDatabaseNameProd(cls):
+    return HDLmConfigInfo.configObj.getValue('entriesDatabaseDatabaseNameProd')  
+  # Get the database name that is used to access the table that contains
+  # the test modifications. The database name is returned to the caller
+  # as a string. The database name is stored in the configuration
+  # values. 
+  @classmethod
+  def getEntriesDatabaseDatabaseNameTest(cls):
+    return HDLmConfigInfo.configObj.getValue('entriesDatabaseDatabaseNameTest')
+  # Get the host name that is used to access the table that contains
+  # the production modifications. The host name is returned to the 
+  # caller as a string. The host name is stored in the configuration
+  # values. The host name is actually a secret value. The host name 
+  # is stored in the AWS Secrets Manager as part of the database 
+  # secret values.
+  @classmethod
+  def getEntriesDatabaseDomainNameProd(cls):
+    return HDLmConfigInfo.configObj.getValue('entriesDatabaseDomainNameProd')
+  # Get the host name that is used to access the table that contains
+  # the test modifications. The host name is returned to the caller
+  # as a string. The host name is stored in the configuration
+  # values. 
+  @classmethod
+  def getEntriesDatabaseDomainNameTest(cls):
+    return HDLmConfigInfo.configObj.getValue('entriesDatabaseDomainNameTest')
   # Get the domain name that is used to insert into the table that
   # contains the modifications
   @classmethod
@@ -164,6 +209,14 @@ class HDLmConfigInfo(object):
   @classmethod
   def getEntriesDatabaseInternetMethod(cls):
     return HDLmConfigInfo.configObj.getValue('entriesDatabaseInternetMethod')
+  # Get the password that is used to access the table that contains
+  # the modifications. This value is returned to the caller as a string.
+  # The password is stored in the configuration values. The password is
+  # actually a secret value that should not be shared with others and 
+  # is stored in the AWS Secrets Manager.
+  @classmethod
+  def getEntriesDatabasePassword(cls):
+    return HDLmConfigInfo.configObj.getValue('entriesDatabasePassword')
   # Get the table name that contains the modifications. This is the
   # table that has all of the rules as one very large JSON object.
   # This approach (using one very large JSON object) is no longer
@@ -181,6 +234,21 @@ class HDLmConfigInfo(object):
     if curVal in HDLmConfigInfo.trueValues:
       return True
     return None
+  # Get the userid that is used to access the table that contains
+  # the modifications. This value is returned to the caller as a string.
+  # The userid is stored in the configuration values. The userid is
+  # actually a secret value that should not be shared with others and
+  # is stored in the AWS Secrets Manager.
+  @classmethod
+  def getEntriesDatabaseUserid(cls):
+    return HDLmConfigInfo.configObj.getValue('entriesDatabaseUserid')
+  # Get the Open AI API key value. The Open AI API key value is
+  # returned to the caller as a string. The Open AI API key value
+  # is used to access the Open AI API. The Open AI API key value
+  # is stored in the configuration values.
+  @classmethod
+  def getOpenAIApiKey(cls):
+    return HDLmConfigInfo.configObj.getValue('openAIApiKey')
   # Get the pass-through limit value abd return it to the caller. The
   # pass-through limit value determines the fraction of events that are
   # treated as null events (nothing is changed). The value is treated as

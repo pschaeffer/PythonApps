@@ -1,5 +1,6 @@
-from   HDLmUtility import *
-from   io          import BytesIO
+from   HDLmConfig     import *
+from   HDLmConfigInfo import *
+from   io             import BytesIO
 import base64
 import datetime
 import json
@@ -2396,12 +2397,12 @@ def removeHtmlTags(inStr):
 
 # This routine sets a bunch of AWS access global values
 def setAwsAccessGlobals():
-  # Get the AWS access globals. The AWS access values
-  # are stored in AWS Secrets Manager.
-  awsAccessKeyStr, awsSecretAccessKeyStr = HDLmUtility.getAwsAccessValues()
-  # Set some of the global values
-  glbAwsAccessKeyId = awsAccessKeyStr
-  glbAwsSecretAccessKey = awsSecretAccessKeyStr
+  # Set some of the AWS access global values. The AWS 
+  # access values are stored in AWS Secrets Manager.
+  global glbAwsAccessKeyId
+  glbAwsAccessKeyId = HDLmConfigInfo.getAwsAccessKeyId()
+  global glbAwsSecretAccessKey
+  glbAwsSecretAccessKey = HDLmConfigInfo.getAwsSecretAccessKey()
   return
 
 # Set the value of a stored parameter. The caller provides 
@@ -2484,14 +2485,16 @@ def main():
   # Collect a few time values for determining how long this takes
   cpuTimeStart = time.process_time()
   wallTimeStart = time.time()
+  # Build a secrets manager client
+  secretsClient = HDLmAwsUtility.buildAwsSecretsManagerClient()
+  # Set some configuration values from the AWS Secrets Manager
+  HDLmConfig.setConfigValues()
   # Start merging files 
   startup() 
   glbLambdaHandler = False
   # Set a few global values
-  secretsClient = None
-  secretsClient, glbWindowsPassword = HDLmUtility.getSecretFromAws(secretsClient, 'WindowsPasswordPds')
-  secretsClient, glbWindowsUserid = HDLmUtility.getSecretFromAws(secretsClient, 'WindowsUseridPds')
-  
+  glbWindowsPassword = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'WindowsPasswordPds')
+  glbWindowsUserid = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'WindowsUseridPds')  
   # Set a few AWS access values for use later
   setAwsAccessGlobals()
   # eventInfo = handleEvent('{"Check":"JavaProxyA", "seconds": 900, "notify": ["+12817990319"], "Level": "all"}')

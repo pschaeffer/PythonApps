@@ -1,7 +1,8 @@
-from   HDLmUtility  import *
-from   io           import BytesIO
-from   io           import StringIO
-from   urllib.parse import urlencode
+from   HDLmConfig     import *
+from   HDLmConfigInfo import *
+from   io             import BytesIO
+from   io             import StringIO
+from   urllib.parse   import urlencode
 import json
 import pycurl
 import time
@@ -156,8 +157,11 @@ def main():
   # Collect a few time values for determining how long this takes
   cpuTimeStart = time.process_time()
   wallTimeStart = time.time()
+  # Set some configuration values
+  HDLmConfig.setConfigValues()
   # Get the Open AI key
-  secretClient, glbApiKey = HDLmUtility.getSecretFromAws(None, 'OpenAiKey')
+  global glbApiKey
+  glbApiKey = HDLmConfigInfo.getOpenAIApiKey()
   # Start
   imageList = getImageChoices()
   # Collect some ending time values 

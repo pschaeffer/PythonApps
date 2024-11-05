@@ -1,5 +1,6 @@
-from   HDLmUtility import *
-from   typing      import Dict
+from   HDLmConfig     import *
+from   HDLmConfigInfo import *
+from   typing         import Dict
 import openai 
 import time
 
@@ -37,9 +38,12 @@ def generate(apiKey, context, goal, temperature=0.9):
 def main():  
   # Collect a few time values for determining how long this takes
   cpuTimeStart = time.process_time()
-  wallTimeStart = time.time()    
+  wallTimeStart = time.time()  
+  # Set some configuration values
+  HDLmConfig.setConfigValues()
   # Get the Open AI key
-  secretClient, glbApiKey = HDLmUtility.getSecretFromAws(None, 'OpenAiKey')
+  global glbApiKey
+  glbApiKey = HDLmConfigInfo.getOpenAIApiKey()  
   # Generate some choices
   context = "You are a web designer. You have a website where tickets are sold for concerts." + \
             " You want to create text that is modern and doesn't sound like marketing speak, " + \

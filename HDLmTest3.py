@@ -1,13 +1,14 @@
-from   HDLmUtility  import *
-from   io           import BytesIO
-from   io           import StringIO
-from   urllib.parse import urlencode
+from   HDLmConfig     import *
+from   HDLmConfigInfo import *
+from   io             import BytesIO
+from   io             import StringIO
+from   urllib.parse   import urlencode
 import json
 import pycurl
 import time
 
 glbApiKey = ''
-glbCertifi = 'C:\\Users\\pscha\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\certifi\\cacert.pem'
+glbCertifi = 'c:\\Users\\pscha\\AppData\\Local\\packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\certifi\\cacert.pem'
 
 # This class creates an empty object with no fields. Fields
 # can be added later if need be.
@@ -108,7 +109,8 @@ def getTextChoices(inputStr):
   headerList = []
   contentTypeHeader = buildJsonContentTypeHeader()
   headerList.append(contentTypeHeader)
-  adict = buildEditDictionary(input=inputStr)
+  modelStr = 'gpt-3.5-turbo-instruct'
+  adict = buildEditDictionary(input = inputStr, model = modelStr)
   # Try to get some text choices
   print('About to get some Open AI data')
   wallTimeStart = time.time()
@@ -132,8 +134,11 @@ def main():
   # Collect a few time values for determining how long this takes
   cpuTimeStart = time.process_time()
   wallTimeStart = time.time()
+  # Set some configuration values
+  HDLmConfig.setConfigValues()
   # Get the Open AI key
-  secretClient, glbApiKey = HDLmUtility.getSecretFromAws(None, 'OpenAiKey')
+  global glbApiKey
+  glbApiKey = HDLmConfigInfo.getOpenAIApiKey()
   # Start
   choiceList = getTextChoices('Buy Now')
   # Collect some ending time values 

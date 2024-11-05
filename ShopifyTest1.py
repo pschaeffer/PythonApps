@@ -1,4 +1,4 @@
-from   HDLmUtility import *
+from   HDLmAwsUtility import *
 import datetime
 import json
 import requests
@@ -41,32 +41,32 @@ def main():
   wallTimeStart = time.time()
   printTimeStart = datetime.datetime.now()
   # Start the AWS secrets manager code
-  secretsClient = HDLmUtility.buildAwsSecretsManagerClient()
+  secretsClient = HDLmAwsUtility.buildAwsSecretsManagerClient()
   # Test code
   data = '{"text":"Hello, World!"}'
   storeStr = 'hdlm1'
   # TempApp1 userid and password
-  useridStr1 = HDLmUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1UseridString1')
-  passwordStr1 = HDLmUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1PasswordString1')
+  useridStr1 = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1UseridString1')
+  passwordStr1 = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1PasswordString1')
   # TempApp2a userid and password (private app)
-  useridStr2a = HDLmUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1UseridString2a')
-  passwordStr2a = HDLmUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1PasswordString2a')
-  sharedSecretStr2a = HDLmUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1SharedSecetString2a')
-  storeFrontTokenStr2a = HDLmUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1StoreFrontTokenString2a')
+  useridStr2a = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1UseridString2a')
+  passwordStr2a = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1PasswordString2a')
+  sharedSecretStr2a = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1SharedSecetString2a')
+  storeFrontTokenStr2a = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1StoreFrontTokenString2a')
   # TempApp2b userid and password
-  useridStr2b = HDLmUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1UseridString2b')
-  passwordStr2b = HDLmUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1PasswordString2b')
+  useridStr2b = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1UseridString2b')
+  passwordStr2b = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1PasswordString2b')
   # TempApp3 userid and password
-  useridStr3 = HDLmUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1UseridString3')
-  passwordStr3 = HDLmUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1PasswordString3')
+  useridStr3 = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1UseridString3')
+  passwordStr3 = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1PasswordString3')
   # TempApp4 userid and password
-  useridStr4 = HDLmUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1UseridString4')
-  passwordStr4 = HDLmUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1PasswordString4')
+  useridStr4 = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1UseridString4')
+  passwordStr4 = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1PasswordString4')
   # TempApp5 userid and password (private app) 
-  useridStr5 = HDLmUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1UseridString5') 
-  passwordStr5 = HDLmUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1PasswordString5')
-  sharedSecretStr5 = HDLmUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1SharedSecetString5')
-  storeFrontTokenStr5 = HDLmUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1StoreFrontTokenString5')
+  useridStr5 = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1UseridString5') 
+  passwordStr5 = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1PasswordString5')
+  sharedSecretStr5 = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1SharedSecetString5')
+  storeFrontTokenStr5 = HDLmAwsUtility.getJustSecretFromAws(secretsClient, 'ShopifyHdlm1StoreFrontTokenString5')
   # Set the request type
   reqTypeStr = 'orders'
   reqTypeStr = 'products'

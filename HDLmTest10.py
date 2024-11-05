@@ -1,10 +1,11 @@
 # This file was created to test AWS Cognito and Python
 
-from   datetime    import datetime
-from   HDLmEmpty   import *
-from   HDLmUtility import *
-from   io          import BytesIO
-from   io          import StringIO
+from   datetime       import datetime
+from   HDLmConfig     import *
+from   HDLmConfigInfo import *
+from   HDLmEmpty      import *
+from   io             import BytesIO
+from   io             import StringIO
 import boto3
 import datetime
 import hashlib
@@ -711,12 +712,12 @@ def requestsAdminGetUser(clientId, userPoolId, userName):
 
 # This routine sets a bunch of AWS access global values
 def setAwsAccessGlobals():
-  # Get the AWS access globals. The AWS access values
-  # are stored in AWS Secrets Manager.
-  awsAccessKeyStr, awsSecretAccessKeyStr = HDLmUtility.getAwsAccessValues()
-  # Set some of the global values
-  glbAwsAccessKeyId = awsAccessKeyStr
-  glbAwsSecretAccessKey = awsSecretAccessKeyStr
+  # Set some of the AWS access global values. The AWS 
+  # access values are stored in AWS Secrets Manager.
+  global glbAwsAccessKeyId
+  glbAwsAccessKeyId = HDLmConfigInfo.getAwsAccessKeyId()
+  global glbAwsSecretAccessKey
+  glbAwsSecretAccessKey = HDLmConfigInfo.getAwsSecretAccessKey()
   return
 
 # This function appear to require a binary key and a binary message and 
@@ -754,6 +755,8 @@ def main():
   # Collect a few time values for determining how long this takes
   cpuTimeStart = time.process_time()
   wallTimeStart = time.time()
+  # Set some configuration values from the AWS Secrets Manager
+  HDLmConfig.setConfigValues()
   # Set a few AWS access values for use later
   setAwsAccessGlobals()
   # Run some checks. Note that in the actual tests the string was

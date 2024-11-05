@@ -10,7 +10,7 @@ from   HDLmExtensionBothManageRules import *
 from   HDLmIgnore                   import * 
 from   HDLmMod                      import *
 from   HDLmPass                     import * 
-from   HDLmStore                    import HDLmStore
+from   HDLmStore                    import *
 from   HDLmString                   import *
 from   HDLmUrl                      import *
 from   HDLmUtility                  import *

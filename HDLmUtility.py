@@ -2,16 +2,14 @@
 # routine that can not import any higher-level routines. The ban on imports is
 # required to avoid Python circular import errors.  This code uses PycURL for 
 # the actual network I/O.
-      
+   
 from   HDLmConfigInfo import *
 from   HDLmDefines    import *
 from   HDLmError      import *
 from   HDLmGlobals    import *
 from   HDLmStateInfo  import *
 from   HDLmString     import *
-from   HDLmUtility    import *
 from   io             import BytesIO
-import boto3
 import json
 import os
 import pycurl
@@ -21,14 +19,6 @@ import urllib.parse
 glbCertifi = 'C:\\Users\\pscha\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\certifi\\cacert.pem'
   
 class HDLmUtility(object):
-  # Build a secret manager client for accessing secrets
-  # stored by the AWS Secrets Manager
-  @staticmethod
-  def buildAwsSecretsManagerClient(regionName = 'us-east-2'):
-    # Create a Secrets Manager client
-    client = boto3.client('secretsmanager',
-                          region_name = regionName)
-    return client
   # Build a bridge rest API query from values passed by
   # the caller. The returned value is the query string.
   @staticmethod
@@ -82,18 +72,6 @@ class HDLmUtility(object):
       return str(value)
     # All other values are converted to a dictionary (for now)
     return value.__dict__
-  # Get a set of AWS access values. These values are used to access 
-  # AWS. The AWS access values are stored in the AWS Secrets Manager.
-  @staticmethod
-  def getAwsAccessValues():
-    # Retrieve the AWS Access Key ID 
-    secretName = 'AwsAccessKeyId'
-    secretsClient, awsAccessStr = HDLmUtility.getSecretFromAws(None, secretName)
-    # Retrieve the AWS Secret Access Key
-    secretName = 'AwsSecretAccessKey'
-    secretsClient, awsSecretStr = HDLmUtility.getSecretFromAws(secretsClient, secretName)
-    # Return the values to the caller
-    return awsAccessStr, awsSecretStr
   # Get the content string from the current configuation 
   @staticmethod
   def getContentString(): 
@@ -150,19 +128,6 @@ class HDLmUtility(object):
       typeLen = len(typeString)
       typeString = typeString[:typeLen-4]
     return typeString
-  # Get a set of database secret values. The database secret values
-  # are stored in the AWS Secrets Manager. The secret name is passed
-  # by the caller. The secret values are returned to the caller in a
-  # dictionary.
-  @staticmethod
-  def getDatabaseSecretsFromAws(secretName = 'Main9Auroa'):
-    # Retrieve the secret value
-    secretsClient, databaseJsonStr = HDLmUtility.getSecretFromAws(None, secretName)
-    # Convert the JSON string to a dictionary with the 
-    # database secret values
-    databaseJsonDict = json.loads(databaseJsonStr)
-    # Return the dictionary to the caller
-    return databaseJsonDict
   # The method below gets the files in a directory. The files
   # are returned to the caller in a list. The call must pass 
   # the path to the directory.  
@@ -172,21 +137,6 @@ class HDLmUtility(object):
     for root, dirs, files in os.walk(path):
       outList.extend(files)
     return outList
-  # Retrieve a secret from the AWS Secrets Manager. The client 
-  # value passed by the caller is used to access the secret. The
-  # secret name is also passed by the caller. The actual secret
-  # value is returned to the caller. The client value can be 
-  # None. If the client value is None, this routine will build
-  # the client.
-  @staticmethod
-  def getJustSecretFromAws(client, secretName):
-    if client == None:
-      # Build a secret manager client
-      client = HDLmUtility.buildAwsSecretsManagerClient()
-    # Retrieve the secret value
-    response = client.get_secret_value(SecretId = secretName)
-    actualSecret = response['SecretString']
-    return actualSecret
   # The method below gets the next number from a list of 
   # numbers. If the list is empty, this routine will return
   # one. If the list has a gap, this routine will return the
@@ -271,36 +221,6 @@ class HDLmUtility(object):
     newString = HDLmUtility.runAJAX('URL', requestAJAXAsyncTrue, URL, \
                                  userid, password, 'post', newStr)
     return newString 
-  # Retrieve a secret from the AWS Secrets Manager. The client 
-  # value passed by the caller is used to access the secret. The
-  # secret name is also passed by the caller. The actual secret
-  # value is returned to the caller. The client value can be 
-  # None. If the client value is None, this routine will build
-  # the client and return it to the caller.
-  @staticmethod
-  def getSecretFromAws(client, secretName):
-    if client == None:
-      # Build a secret manager client
-      client = HDLmUtility.buildAwsSecretsManagerClient()
-    # Retrieve the secret value
-    response = client.get_secret_value(SecretId = secretName)
-    actualSecret = response['SecretString']
-    return client, actualSecret
-  # Get a set of Twilio access values. These values are used to access 
-  # Twilio. The Twilio access values are stored in the AWS Secrets Manager.
-  @staticmethod
-  def getTwilioAccessValues():
-    # Retrieve the Twilio Account SID
-    secretName = 'TwilioSID'
-    secretsClient, twilioSidStr = HDLmUtility.getSecretFromAws(None, secretName)
-    # Retrieve the Twilio Auth Token
-    secretName = 'TwilioAuthToken'
-    secretsClient, twilioAuthTokenStr = HDLmUtility.getSecretFromAws(secretsClient, secretName)
-    # Retrieve the Twilio phone number
-    secretName = 'TwilioPhoneNumber'
-    secretsClient, twilioPhoneNumberStr = HDLmUtility.getSecretFromAws(secretsClient, secretName)
-    # Return the values to the caller
-    return twilioSidStr, twilioAuthTokenStr, twilioPhoneNumberStr
   # The method below determines Electron JS is active or not.
   # Electron JS is never active under Python.
   @staticmethod

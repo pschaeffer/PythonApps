@@ -1,6 +1,8 @@
 # This file was created to test storing secrets in AWS Secrets Manager
 
-from   HDLmUtility import *
+from   HDLmAwsUtility import *
+from   HDLmConfig     import *
+from   HDLmConfigInfo import *
 import boto3
 import time
 
@@ -9,15 +11,22 @@ def main():
   # Collect a few time values for determining how long this takes
   cpuTimeStart = time.process_time()
   wallTimeStart = time.time()
-  # Build a secret manager client
-  client = HDLmUtility.buildAwsSecretsManagerClient();
+  # Get the maximum number of clusters. This value is not
+  # really used in this program. It is just here to show
+  # how to get the value.
+  maxClusterCount = HDLmConfigInfo.getClustersMaxCount()
+  # Build a secrets manager client
+  client = HDLmAwsUtility.buildAwsSecretsManagerClient()
+  # Get a map of secrets
+  secretsMap = HDLmAwsUtility.getAMapOfSecrets(client, ['TwilioSID', 'Main9Auroa'])
+  HDLmConfig.setConfigValues()
   # Specify the secret name
   secretName = "TwilioSID"
   # secretName = "Main9Auroa"
   # Retrieve the secret value
-  secretclient, secret = HDLmUtility.getSecretFromAws(None, secretName) 
+  secretclient, secret = HDLmAwsUtility.getSecretFromAws(None, secretName) 
   # Get some database secrets
-  databaseSecrets = HDLmUtility.getDatabaseSecretsFromAws()
+  databaseSecrets = HDLmAwsUtility.getDatabaseSecretsFromAws()
   # Collect some ending time values   
   cpuTimeEnd = time.process_time()
   wallTimeEnd = time.time()

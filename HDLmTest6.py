@@ -1,7 +1,8 @@
-from   HDLmAssert  import *
-from   HDLmUtility import *
-from   io         import BytesIO
-from   io         import StringIO
+from   HDLmAssert     import *
+from   HDLmConfig     import *
+from   HDLmConfigInfo import *
+from   io             import BytesIO
+from   io             import StringIO
 import json
 import pycurl
 import pymysql.cursors 
@@ -230,14 +231,15 @@ def printStringInParts(whereStr, inStr):
 
 # This routine sets a bunch of database global values
 def setDatabaseGlobals():
-  # Get the database globals as a dictionary. The database
-  # secrets are stored in AWS Secrets Manager.
-  databaseSecrets = HDLmUtility.getDatabaseSecretsFromAws()
   # Set some of the global values
-  glbRemoteDatabase = databaseSecrets['dbClusterIdentifier']
-  glbRemoteHost = databaseSecrets['host'] 
-  glbRemotePassword = databaseSecrets['password']
-  glbRemoteUser = databaseSecrets['username']
+  global glbRemoteDatabase
+  glbRemoteDatabase = HDLmConfigInfo.getEntriesDatabaseDatabaseNameProd()
+  global glbRemoteHost
+  glbRemoteHost = HDLmConfigInfo.getEntriesDatabaseDomainNameProd()
+  global glbRemotePassword
+  glbRemotePassword = HDLmConfigInfo.getEntriesDatabasePassword()
+  global glbRemoteUser
+  glbRemoteUser = HDLmConfigInfo.getEntriesDatabaseUserid()
   return
     
 # Main program

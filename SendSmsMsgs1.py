@@ -1,8 +1,8 @@
 # This program reads an input SMS XML file and finds all 
 # of the unique phone numbers
 
-from   HDLmUtility import *
-from   twilio.rest import Client
+from   HDLmAwsUtility import *
+from   twilio.rest    import Client
 import csv
 import xml.etree.ElementTree as ET
 import time
@@ -416,7 +416,7 @@ def sendMessages(client, msgTxt, fromPhone, phoneMap):
 def setTwilioAccessGlobals():
   # Get the Twilio access globals. The Twilio access values
   # are stored in AWS Secrets Manager.
-  twilioSidStr, twilioAuthStr, twilioPhoneStr = HDLmUtility.getTwilioAccessValues()
+  twilioSidStr, twilioAuthStr, twilioPhoneStr = HDLmAwsUtility.getTwilioAccessValues()
   # Set some of the Twilio access global values 
   glbTwilioSID = twilioSidStr
   glbTwilioAuthToken = twilioAuthStr
