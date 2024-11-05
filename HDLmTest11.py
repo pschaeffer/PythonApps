@@ -246,8 +246,6 @@ def main():
   wallTimeStart = time.time()   
   # Parse the arguments
   parser = parseArguments()
-  # Set some configuration values
-  HDLmConfig.setConfigValues()
   # Get the Open AI key
   global glbApiKey
   glbApiKey = HDLmConfigInfo.getOpenAIApiKey()

@@ -2487,8 +2487,6 @@ def main():
   wallTimeStart = time.time()
   # Build a secrets manager client
   secretsClient = HDLmAwsUtility.buildAwsSecretsManagerClient()
-  # Set some configuration values from the AWS Secrets Manager
-  HDLmConfig.setConfigValues()
   # Start merging files 
   startup() 
   glbLambdaHandler = False

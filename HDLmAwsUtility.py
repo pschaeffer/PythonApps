@@ -52,8 +52,9 @@ class HDLmAwsUtility(object):
     return mapOfSecrets	 
   # Get a set of AWS access values. These values are used to access 
   # AWS. The AWS access values are stored in the AWS Secrets Manager.
+  # This routine is no longer used. 
   @staticmethod
-  def getAwsAccessValues():
+  def getAwsAccessValuesNotUsed():
     # Retrieve the AWS Access Key ID 
     secretName = 'AwsAccessKeyId'
     secretsClient, awsAccessStr = HDLmAwsUtility.getSecretFromAws(None, secretName)
@@ -65,9 +66,9 @@ class HDLmAwsUtility(object):
   # Get a set of database secret values. The database secret values
   # are stored in the AWS Secrets Manager. The secret name is passed
   # by the caller. The secret values are returned to the caller in a
-  # dictionary.
+  # dictionary. This routine is no longer in use.
   @staticmethod
-  def getDatabaseSecretsFromAws(secretName = 'Main9Auroa'):
+  def getDatabaseSecretsFromAwsNotUsed(secretName = 'Main9Auroa'):
     # Retrieve the secret value
     secretsClient, databaseJsonStr = HDLmAwsUtility.getSecretFromAws(None, secretName)
     # Convert the JSON string to a dictionary with the 

@@ -28,12 +28,12 @@ class HDLmConfig(object):
   configValues["entriesBridgeInsertUrl"]          = "/io/bucket/insert/"
   configValues["entriesBridgeInternetMethod"]     = "https"
   configValues["entriesBridgePartialPath"]        = "io/bucket"
-  configValues["entriesBridgePassword"]           = "headlamp"
+  configValues["entriesBridgePassword"]           = ""
   configValues["entriesBridgeReadUrl"]            = "/io/bucket/search/"
   configValues["entriesBridgeTableSeparate"]      = "main_9"
   configValues["entriesBridgeUpdateUrl"]          = "/io/bucket/update/"
   configValues["entriesBridgeUseCache"]           = "false"
-  configValues["entriesBridgeUserid"]             = "admin"
+  configValues["entriesBridgeUserid"]             = ""
   configValues["entriesDatabaseCompanyPrefix"]    = ""
   configValues["entriesDatabaseContentSuffix"]    = "java"
   configValues["entriesDatabaseDatabaseNameProd"] = "main_9"
@@ -66,6 +66,61 @@ class HDLmConfig(object):
   configValues["serverName"]                      = "javaproxya.dnsalias.com"
   configValues["supportHTTP2"]                    = "true"		
   configValues["urlValueName"]                    = "HDLmUrlValue"
+  # The code below does some of the work needed to set the configuration
+  # values. This code gets some secrets from the AWS Secrets Manager and
+  # stores them in the configuration values. 
+  mainList = []
+  # The order here is, where to put the configuration value, the AWS name of the value, and the JSON key,
+  # if any. 
+  infoAwsAccessKeyId = ["awsAccessKeyId", "AwsAccessKeyId", ""] 	
+  infoAwsSecretAccessKey =	["awsSecretAccessKey", "AwsSecretAccessKey", ""]
+  infoOpenAiKey = ["openAIApiKey", "OpenApiAiKeySchaeffer", ""]
+  infoAwsDatabaseUserid = ["entriesDatabaseUserid", "Main9Auroa", "username"]
+  infoAwsDatabasePassword = ["entriesDatabasePassword", "Main9Auroa", "password"]
+  # The value that was obtained below was not the actual database name. It is not clear what this
+  # value really is/was.  
+  if False:
+    infoAwsDatabaseDatabaseNameProd = ["entriesDatabaseDatabaseNameProd", "Main9Auroa", "dbClusterIdentifier"]
+  infoAwsDatabaseDomainNameProd = ["entriesDatabaseDomainNameProd", "Main9Auroa", "host"]
+  infoAwsEntriesUserid = ["entriesBridgeUserid", "EntriesBridgeUserid", ""]
+  infoAwsEntriesPassword = ["entriesBridgePassword", "EntriesBridgePassword", ""]
+  # Add each set of information about an AWS secret to the main list
+  mainList.append(infoAwsAccessKeyId)
+  mainList.append(infoAwsSecretAccessKey)
+  mainList.append(infoOpenAiKey)
+  mainList.append(infoAwsDatabaseUserid)
+  mainList.append(infoAwsDatabasePassword)
+  # The value that was obtained below was not the actual database name. It is not clear what this
+  # value really is/was.  
+  if False:
+    mainList.append(infoAwsDatabaseDatabaseNameProd)
+  mainList.append(infoAwsDatabaseDomainNameProd)
+  mainList.append(infoAwsEntriesUserid)
+  mainList.append(infoAwsEntriesPassword)
+  # Build a list of AWS secret names 
+  secretsNames = []
+  for secretInfo in mainList:
+    secretName = secretInfo[1]
+    if secretName not in secretsNames: 
+      secretsNames.append(secretName);  		
+  # Get the actual secrets from the AWS Secrets Manager
+  client = HDLmAwsUtility.buildAwsSecretsManagerClient("us-east-2")
+  secretsMap = HDLmAwsUtility.getAMapOfSecrets(client, secretsNames)
+  # Store each of the secrets in the configuration values 
+  for secretInfo in mainList:
+    secretConfigName = secretInfo[0]
+    secretAwsName = secretInfo[1]
+    secretAwsJsonKey = secretInfo[2]
+    # Get the secret value from the map 
+    secretAwsValue = secretsMap[secretAwsName]
+    # Check if we need to extract the actual secret from some JSON *
+    if secretAwsJsonKey != "":
+      # Convert the JSON string to an object
+      secretJsonObject = json.loads(secretAwsValue) 
+      actualSecretValue = secretJsonObject[secretAwsJsonKey]
+      configValues[secretConfigName] = actualSecretValue
+    else:
+      configValues[secretConfigName] = secretAwsValue	  
   # This routine adds any missing fields to a configuration object.
   # A configuration object in this case means a modification object
   # being used to build a configuration. 
@@ -109,9 +164,9 @@ class HDLmConfig(object):
   # This routine does all of the work needed to set the configuration
   # values. Some secrets are stored in the configuration values. This 
   # routine gets the secrets from the AWS Secrets Manager and stores 
-  # them in the configuration values.  
+  # them in the configuration values. This routine is no longer used.
   @staticmethod
-  def setConfigValues():
+  def setConfigValuesNotUsed():
     mainList = []
 		# The order here is, where to put the configuration value, the AWS name of the value, and the JSON key,
 		# if any. 

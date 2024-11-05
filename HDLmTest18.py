@@ -19,14 +19,13 @@ def main():
   client = HDLmAwsUtility.buildAwsSecretsManagerClient()
   # Get a map of secrets
   secretsMap = HDLmAwsUtility.getAMapOfSecrets(client, ['TwilioSID', 'Main9Auroa'])
-  HDLmConfig.setConfigValues()
   # Specify the secret name
   secretName = "TwilioSID"
   # secretName = "Main9Auroa"
   # Retrieve the secret value
   secretclient, secret = HDLmAwsUtility.getSecretFromAws(None, secretName) 
   # Get some database secrets
-  databaseSecrets = HDLmAwsUtility.getDatabaseSecretsFromAws()
+  # databaseSecrets = HDLmAwsUtility.getDatabaseSecretsFromAws()
   # Collect some ending time values   
   cpuTimeEnd = time.process_time()
   wallTimeEnd = time.time()

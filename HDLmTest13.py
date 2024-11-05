@@ -39,8 +39,6 @@ def main():
   # Collect a few time values for determining how long this takes
   cpuTimeStart = time.process_time()
   wallTimeStart = time.time()  
-  # Set some configuration values
-  HDLmConfig.setConfigValues()
   # Get the Open AI key
   global glbApiKey
   glbApiKey = HDLmConfigInfo.getOpenAIApiKey()  

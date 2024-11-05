@@ -755,8 +755,6 @@ def main():
   # Collect a few time values for determining how long this takes
   cpuTimeStart = time.process_time()
   wallTimeStart = time.time()
-  # Set some configuration values from the AWS Secrets Manager
-  HDLmConfig.setConfigValues()
   # Set a few AWS access values for use later
   setAwsAccessGlobals()
   # Run some checks. Note that in the actual tests the string was
