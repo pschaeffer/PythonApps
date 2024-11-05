@@ -28,7 +28,7 @@ class HDLmConfig(object):
   configValues["entriesBridgeInsertUrl"]          = "/io/bucket/insert/"
   configValues["entriesBridgeInternetMethod"]     = "https"
   configValues["entriesBridgePartialPath"]        = "io/bucket"
-  configValues["entriesBridgePassword"]           = ''
+  configValues["entriesBridgePassword"]           = ""
   configValues["entriesBridgeReadUrl"]            = "/io/bucket/search/"
   configValues["entriesBridgeTableSeparate"]      = "main_9"
   configValues["entriesBridgeUpdateUrl"]          = "/io/bucket/update/"
