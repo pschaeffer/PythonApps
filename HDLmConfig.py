@@ -69,34 +69,19 @@ class HDLmConfig(object):
   # The code below does some of the work needed to set the configuration
   # values. This code gets some secrets from the AWS Secrets Manager and
   # stores them in the configuration values. 
-  mainList = []
-  # The order here is, where to put the configuration value, the AWS name of the value, and the JSON key,
-  # if any. 
-  infoAwsAccessKeyId = ["awsAccessKeyId", "AwsAccessKeyId", ""] 	
-  infoAwsSecretAccessKey =	["awsSecretAccessKey", "AwsSecretAccessKey", ""]
-  infoOpenAiKey = ["openAIApiKey", "OpenApiAiKeySchaeffer", ""]
-  infoAwsDatabaseUserid = ["entriesDatabaseUserid", "Main9Auroa", "username"]
-  infoAwsDatabasePassword = ["entriesDatabasePassword", "Main9Auroa", "password"]
-  # The value that was obtained below was not the actual database name. It is not clear what this
-  # value really is/was.  
-  if False:
-    infoAwsDatabaseDatabaseNameProd = ["entriesDatabaseDatabaseNameProd", "Main9Auroa", "dbClusterIdentifier"]
-  infoAwsDatabaseDomainNameProd = ["entriesDatabaseDomainNameProd", "Main9Auroa", "host"]
-  infoAwsEntriesUserid = ["entriesBridgeUserid", "EntriesBridgeUserid", ""]
-  infoAwsEntriesPassword = ["entriesBridgePassword", "EntriesBridgePassword", ""]
-  # Add each set of information about an AWS secret to the main list
-  mainList.append(infoAwsAccessKeyId)
-  mainList.append(infoAwsSecretAccessKey)
-  mainList.append(infoOpenAiKey)
-  mainList.append(infoAwsDatabaseUserid)
-  mainList.append(infoAwsDatabasePassword)
-  # The value that was obtained below was not the actual database name. It is not clear what this
-  # value really is/was.  
-  if False:
-    mainList.append(infoAwsDatabaseDatabaseNameProd)
-  mainList.append(infoAwsDatabaseDomainNameProd)
-  mainList.append(infoAwsEntriesUserid)
-  mainList.append(infoAwsEntriesPassword)
+  mainList = [
+               # The order here is, where to put the configuration value, the AWS name of the value, and the JSON key,
+               # if any. 
+               ["awsAccessKeyId", "AwsAccessKeyId", ""], 	
+               ["awsSecretAccessKey", "AwsSecretAccessKey", ""],
+               ["openAIApiKey", "OpenApiAiKeySchaeffer", ""],
+               ["entriesDatabaseUserid", "Main9Auroa", "username"],
+               ["entriesDatabasePassword", "Main9Auroa", "password"],
+               ["entriesDatabaseDomainNameProd", "Main9Auroa", "host"],
+               # ["entriesDatabaseDatabaseNameProd", "Main9Auroa", "dbClusterIdentifier"]
+               ["entriesBridgePassword", "EntriesBridgePassword", ""],
+               ["entriesBridgeUserid", "EntriesBridgeUserid", ""]
+             ]
   # Build a list of AWS secret names 
   secretsNames = []
   for secretInfo in mainList:
@@ -158,8 +143,34 @@ class HDLmConfig(object):
     return self.configValues[valueStr]
   # This routine sets one configuration value. If the value already
   # exists, it is replaced. If the value does not exist, it is added.
+  # This routine is no longer used. Actually, it is used by a routine
+  # that is no longer used.
   @classmethod
-  def setConfigValue(self, configName, configValue):
+  def setConfigValueNotUsed(self, configName, configValue):
+    # Check a few values passed by the caller
+    if configName == None:
+      errorText = 'The name of the configuration value is not set'
+      raise ValueError(errorText)
+    # Check the type of the configuration name
+    if type(configName) != type(''):
+      errorText = f'The name ({configName}) of the configuration value is not a string'
+      raise ValueError(errorText)
+    # Check the length of the configuration name
+    if len(configName) <= 0:
+      errorText = 'The length of the configuration name is invalid' 
+      raise ValueError(errorText)
+    # Check if the configuration value is set
+    if configValue == None:
+      errorText = 'The configuration value is not set'
+      raise ValueError(errorText)
+    # Check the type of the configuration Value
+    if type(configValue) != type(''):
+      errorText = f'The type of the configuration value ({configValue}) is not a string'
+      raise ValueError(errorText)
+    # Check the length of the configuration Value
+    if len(configValue) <= 0:
+      errorText = 'The length of the configuration Value is invalid' 
+      raise ValueError(errorText)
     self.configValues[configName] = configValue
   # This routine does all of the work needed to set the configuration
   # values. Some secrets are stored in the configuration values. This 
@@ -216,6 +227,6 @@ class HDLmConfig(object):
 				# Convert the JSON string to an object
         secretJsonObject = json.loads(secretAwsValue) 
         actualSecretValue = secretJsonObject[secretAwsJsonKey]
-        HDLmConfig.setConfigValue(secretConfigName, actualSecretValue)
+        HDLmConfig.setConfigValueNotUsed(secretConfigName, actualSecretValue)
       else:
-        HDLmConfig.setConfigValue(secretConfigName, secretAwsValue)	
+        HDLmConfig.setConfigValueNotUsed(secretConfigName, secretAwsValue)	

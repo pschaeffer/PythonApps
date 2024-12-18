@@ -25,7 +25,8 @@ def main():
   # Retrieve the secret value
   secretclient, secret = HDLmAwsUtility.getSecretFromAws(None, secretName) 
   # Get some database secrets
-  # databaseSecrets = HDLmAwsUtility.getDatabaseSecretsFromAws()
+  HDLmConfig.setConfigValuesNotUsed()
+  # databaseSecrets = HDLmAwsUtility.getDatabaseSecretsFromAwsNotUsed()
   # Collect some ending time values   
   cpuTimeEnd = time.process_time()
   wallTimeEnd = time.time()
