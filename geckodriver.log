@@ -1,0 +1,411 @@
+1682184668590	geckodriver	INFO	Listening on 127.0.0.1:60768
+1682184671679	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60769" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofile5MSpJ7"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682184672347	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682184672359	Marionette	INFO	Listening on port 60776
+Read port: 60776
+WebDriver BiDi listening on ws://127.0.0.1:60769
+1682184672618	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofile5MSpJ7\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:60769/devtools/browser/0f2fd01b-cf5f-4805-9246-ddef2a834199
+1682184789030	geckodriver	INFO	Listening on 127.0.0.1:60920
+1682184792080	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60921" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileJAconx"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682184792508	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682184792514	Marionette	INFO	Listening on port 60929
+Read port: 60929
+WebDriver BiDi listening on ws://127.0.0.1:60921
+1682184792689	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileJAconx\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:60921/devtools/browser/fc06d9ec-6b3a-4bce-87b3-0e74bd8b76df
+1682184826814	geckodriver	INFO	Listening on 127.0.0.1:60995
+1682184829882	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60996" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileYhnGMy"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682184830280	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682184830286	Marionette	INFO	Listening on port 61006
+Read port: 61006
+WebDriver BiDi listening on ws://127.0.0.1:60996
+1682184830449	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileYhnGMy\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:60996/devtools/browser/e073bee7-1ac2-44cd-bef5-1c167a958c31
+1682185435854	geckodriver	INFO	Listening on 127.0.0.1:61206
+1682185438887	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61207" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofilednLUQt"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682185439296	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682185439303	Marionette	INFO	Listening on port 61215
+Read port: 61215
+WebDriver BiDi listening on ws://127.0.0.1:61207
+1682185439510	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofilednLUQt\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:61207/devtools/browser/93126278-2a72-442c-b5dc-c42a669aff02
+1682185608285	geckodriver	INFO	Listening on 127.0.0.1:61343
+1682185611325	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61344" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofile20kKBI"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682185611743	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682185611750	Marionette	INFO	Listening on port 61352
+Read port: 61352
+WebDriver BiDi listening on ws://127.0.0.1:61344
+1682185611915	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofile20kKBI\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:61344/devtools/browser/a61701d7-b8e1-4e6d-a521-0d481670b8f1
+1682185858665	geckodriver	INFO	Listening on 127.0.0.1:61463
+1682185861704	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61464" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofilehOW42U"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682185862097	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682185862103	Marionette	INFO	Listening on port 61472
+Read port: 61472
+WebDriver BiDi listening on ws://127.0.0.1:61464
+1682185862273	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofilehOW42U\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:61464/devtools/browser/31aee95d-ab27-4be4-aa66-68207567947e
+1682187651949	geckodriver	INFO	Listening on 127.0.0.1:61879
+1682187654997	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61880" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofile7C9NQB"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682187655596	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682187655602	Marionette	INFO	Listening on port 61887
+Read port: 61887
+WebDriver BiDi listening on ws://127.0.0.1:61880
+1682187655760	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofile7C9NQB\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:61880/devtools/browser/fa8cb127-eb7c-4ac2-addd-c8c33ced7433
+console.error: ({})
+console.error: ({})
+1682188019474	geckodriver	INFO	Listening on 127.0.0.1:62035
+1682188022529	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62038" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileGfZRG3"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682188022937	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682188022945	Marionette	INFO	Listening on port 62046
+Read port: 62046
+WebDriver BiDi listening on ws://127.0.0.1:62038
+1682188023118	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileGfZRG3\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:62038/devtools/browser/b9313eac-29be-4017-be06-113facdde8d8
+1682188290011	Marionette	INFO	Stopped listening on port 62046
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1682193928290	geckodriver	INFO	Listening on 127.0.0.1:63695
+1682193931365	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63696" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofile6MNSZ3"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682193931794	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682193931805	Marionette	INFO	Listening on port 63703
+Read port: 63703
+WebDriver BiDi listening on ws://127.0.0.1:63696
+1682193932023	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofile6MNSZ3\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:63696/devtools/browser/cee4c359-1534-40d2-ab8a-716c4fb107bc
+1682194581173	geckodriver	INFO	Listening on 127.0.0.1:64027
+1682194584239	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64028" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileVMIfdz"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682194584636	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682194584642	Marionette	INFO	Listening on port 64035
+Read port: 64035
+WebDriver BiDi listening on ws://127.0.0.1:64028
+1682194584796	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileVMIfdz\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:64028/devtools/browser/e964cd23-79e5-48ad-9240-d426d7ac8171
+1682194687387	geckodriver	INFO	Listening on 127.0.0.1:64115
+1682194690454	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64116" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileKfcLbR"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682194690847	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682194690855	Marionette	INFO	Listening on port 64124
+Read port: 64124
+WebDriver BiDi listening on ws://127.0.0.1:64116
+1682194691044	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileKfcLbR\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:64116/devtools/browser/2edc077f-9c6a-4597-950e-f062b5d7fc61
+1682194841249	geckodriver	INFO	Listening on 127.0.0.1:64313
+1682194844296	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64314" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileHn2ESU"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682194844699	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682194844706	Marionette	INFO	Listening on port 64321
+Read port: 64321
+WebDriver BiDi listening on ws://127.0.0.1:64314
+1682194844867	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileHn2ESU\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:64314/devtools/browser/9446eb68-2297-4599-b2e9-5523b3abbe46
+1682194949290	geckodriver	INFO	Listening on 127.0.0.1:64399
+1682194952353	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64400" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileb9XWGe"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682194952758	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682194952764	Marionette	INFO	Listening on port 64408
+Read port: 64408
+WebDriver BiDi listening on ws://127.0.0.1:64400
+1682194952928	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileb9XWGe\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:64400/devtools/browser/22a11270-5771-4412-9d71-5c136cfd7697
+1682195220132	geckodriver	INFO	Listening on 127.0.0.1:64521
+1682195223182	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64522" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileJdtgdj"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682195223579	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682195223585	Marionette	INFO	Listening on port 64530
+Read port: 64530
+WebDriver BiDi listening on ws://127.0.0.1:64522
+1682195223737	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileJdtgdj\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:64522/devtools/browser/0d8bd7a2-a39e-4dab-afe9-167b5c76a1d8
+1682195293489	geckodriver	INFO	Listening on 127.0.0.1:64602
+1682195296546	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64603" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileFwFjiu"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682195296922	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682195296928	Marionette	INFO	Listening on port 64610
+Read port: 64610
+WebDriver BiDi listening on ws://127.0.0.1:64603
+1682195297097	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileFwFjiu\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:64603/devtools/browser/3276c91c-5f44-4e37-a526-eb0e7fd5523d
+1682195375899	geckodriver	INFO	Listening on 127.0.0.1:64686
+1682195378954	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64687" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofile70ZkEK"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682195379347	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682195379353	Marionette	INFO	Listening on port 64694
+Read port: 64694
+WebDriver BiDi listening on ws://127.0.0.1:64687
+1682195379503	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofile70ZkEK\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:64687/devtools/browser/6d86d542-0a46-41af-b9d0-c7e184471a8d
+1682195497543	geckodriver	INFO	Listening on 127.0.0.1:64777
+1682195500605	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64778" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofile4ZQ1Ss"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682195500990	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682195500996	Marionette	INFO	Listening on port 64785
+Read port: 64785
+WebDriver BiDi listening on ws://127.0.0.1:64778
+1682195501148	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofile4ZQ1Ss\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:64778/devtools/browser/64a01851-1785-4c02-9b79-e621ead6bb50
+1682195729529	geckodriver	INFO	Listening on 127.0.0.1:64903
+1682195732571	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64904" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofilef9e3kM"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682195732952	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682195732959	Marionette	INFO	Listening on port 64911
+Read port: 64911
+WebDriver BiDi listening on ws://127.0.0.1:64904
+1682195733134	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofilef9e3kM\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:64904/devtools/browser/dbba9ffa-8538-4975-975c-eaf8e459a777
+1682195906892	geckodriver	INFO	Listening on 127.0.0.1:65071
+1682195909936	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65072" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileHB9rpO"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682195910345	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682195910351	Marionette	INFO	Listening on port 65079
+Read port: 65079
+WebDriver BiDi listening on ws://127.0.0.1:65072
+1682195910501	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileHB9rpO\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:65072/devtools/browser/c8c7e2ad-b5a4-4243-818e-23293e9b19a8
+1682196482786	geckodriver	INFO	Listening on 127.0.0.1:49653
+1682196485835	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49654" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileWkcDEm"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682196486235	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682196486243	Marionette	INFO	Listening on port 49661
+Read port: 49661
+WebDriver BiDi listening on ws://127.0.0.1:49654
+1682196486418	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileWkcDEm\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:49654/devtools/browser/6fbc3c5a-8a3d-4a86-9268-de1904acbe7d
+1682196696277	geckodriver	INFO	Listening on 127.0.0.1:49767
+1682196699315	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49768" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileMlWeYS"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682196699786	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682196699792	Marionette	INFO	Listening on port 49775
+Read port: 49775
+WebDriver BiDi listening on ws://127.0.0.1:49768
+1682196699982	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileMlWeYS\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:49768/devtools/browser/a2a45325-5dbf-4897-bf2c-99c8ec2d3aea
+1682196792003	Marionette	INFO	Stopped listening on port 49775
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1682196916001	geckodriver	INFO	Listening on 127.0.0.1:49867
+1682196919040	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49868" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileI6iDVq"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682196919532	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682196919544	Marionette	INFO	Listening on port 49877
+Read port: 49877
+WebDriver BiDi listening on ws://127.0.0.1:49868
+1682196919747	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileI6iDVq\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:49868/devtools/browser/2389e9e2-feae-4b45-a05d-f09cddef3e3b
+1682197599259	geckodriver	INFO	Listening on 127.0.0.1:50082
+1682197602295	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50083" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofile9Kp4Ry"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682197602951	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682197602959	Marionette	INFO	Listening on port 50090
+Read port: 50090
+WebDriver BiDi listening on ws://127.0.0.1:50083
+1682197603150	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofile9Kp4Ry\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:50083/devtools/browser/4b8c0010-cd6a-4e01-b70c-ab6d93889f20
+1682197998612	geckodriver	INFO	Listening on 127.0.0.1:50256
+1682198001667	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50257" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofile9EJWEP"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682198002068	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682198002074	Marionette	INFO	Listening on port 50264
+Read port: 50264
+WebDriver BiDi listening on ws://127.0.0.1:50257
+1682198002230	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofile9EJWEP\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:50257/devtools/browser/63e6ca58-4f63-4c22-8824-cd081e7b3094
+1682198839896	geckodriver	INFO	Listening on 127.0.0.1:50455
+1682198842964	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50456" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileRO3qKX"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682198843757	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682198843767	Marionette	INFO	Listening on port 50464
+Read port: 50464
+WebDriver BiDi listening on ws://127.0.0.1:50456
+1682198844027	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileRO3qKX\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:50456/devtools/browser/35210026-e25b-4b76-9f0b-c9f87a7f26d9
+1682199434216	geckodriver	INFO	Listening on 127.0.0.1:50621
+1682199437260	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50622" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofilefDs9QF"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682199437637	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682199437644	Marionette	INFO	Listening on port 50630
+Read port: 50630
+WebDriver BiDi listening on ws://127.0.0.1:50622
+1682199437811	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofilefDs9QF\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:50622/devtools/browser/89533022-41cf-443e-8cbc-0165178efc1c
+1682199494540	geckodriver	INFO	Listening on 127.0.0.1:50702
+1682199497601	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50703" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileuatqiq"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682199498097	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682199498103	Marionette	INFO	Listening on port 50711
+Read port: 50711
+WebDriver BiDi listening on ws://127.0.0.1:50703
+1682199498273	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileuatqiq\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:50703/devtools/browser/37ec8153-c769-436b-916a-f9d089a0c4e2
+1682199570193	geckodriver	INFO	Listening on 127.0.0.1:50783
+1682199573233	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50784" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileKfyWyU"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682199573665	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682199573674	Marionette	INFO	Listening on port 50791
+Read port: 50791
+WebDriver BiDi listening on ws://127.0.0.1:50784
+1682199573875	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileKfyWyU\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:50784/devtools/browser/0f00bf1e-48ae-465b-bec7-38e867adef1b
+1682199729232	geckodriver	INFO	Listening on 127.0.0.1:50910
+1682199732284	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50912" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofilelX8mCa"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682199732708	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682199732716	Marionette	INFO	Listening on port 50919
+Read port: 50919
+WebDriver BiDi listening on ws://127.0.0.1:50912
+1682199732911	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofilelX8mCa\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:50912/devtools/browser/5040c7ef-d169-436c-9b0c-093cc1c38b81
+1682201319966	geckodriver	INFO	Listening on 127.0.0.1:51288
+1682201323008	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51289" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileCYbMye"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682201323394	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682201323401	Marionette	INFO	Listening on port 51296
+Read port: 51296
+WebDriver BiDi listening on ws://127.0.0.1:51289
+1682201323566	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileCYbMye\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:51289/devtools/browser/690a5517-e263-4098-a5ff-58dab7f1f789
+1682204443790	geckodriver	INFO	Listening on 127.0.0.1:62612
+1682204446836	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62613" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileg9aZ11"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1682204447230	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1682204447236	Marionette	INFO	Listening on port 62620
+Read port: 62620
+WebDriver BiDi listening on ws://127.0.0.1:62613
+1682204447398	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\pscha\\AppData\\Local\\Temp\\rust_mozprofileg9aZ11\\search.json.mozlz4", (void 0)))
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:62613/devtools/browser/20336815-415c-4724-aa75-140cecfcb153

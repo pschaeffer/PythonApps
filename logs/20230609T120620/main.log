@@ -1,0 +1,5 @@
+2023-06-09 12:06:21.238 [info] update#ctor - updates are disabled due to running as Admin in user setup
+2023-06-09 12:06:24.950 [info] WSL is not installed, so could not detect WSL profiles
+2023-06-09 12:06:28.877 [warning] No ptyHost heartbeat after 6 seconds
+2023-06-09 12:13:31.800 [info] Extension host with pid 16636 exited with code: 0, signal: unknown.
+2023-06-09 12:13:32.511 [info] Extension host with pid 36080 exited with code: 0, signal: unknown.
