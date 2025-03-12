@@ -13,7 +13,7 @@ def buildLines(color):
   # Build the first and only line
   line = ''
   data = color.split()
-  name = data[00]
+  name = data[0]
   hex = data[1]
   category = data[2]
   line += '  '
