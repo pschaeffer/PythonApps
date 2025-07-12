@@ -3,8 +3,7 @@
     "profileAssociations": {
         "workspaces": {},
         "emptyWindows": {
-            "1686330382043": "__default__profile__",
-            "1686330458209": "__default__profile__"
+            "1686330382043": "__default__profile__"
         }
     },
     "profileAssociationsMigration": true,
@@ -15,13 +14,10 @@
         "emptyWindows": [
             {
                 "backupFolder": "1686330382043"
-            },
-            {
-                "backupFolder": "1686330458209"
             }
         ]
     },
-    "windowControlHeight": 30,
+    "windowControlHeight": 35,
     "theme": "vs-dark",
     "themeBackground": "#1f1f1f",
     "windowSplash": {
@@ -32,24 +28,29 @@
             "background": "#1f1f1f",
             "editorBackground": "#1f1f1f",
             "titleBarBackground": "#181818",
+            "titleBarBorder": "#2b2b2b",
             "activityBarBackground": "#181818",
+            "activityBarBorder": "#2b2b2b",
             "sideBarBackground": "#181818",
+            "sideBarBorder": "#2b2b2b",
             "statusBarBackground": "#181818",
+            "statusBarBorder": "#2b2b2b",
             "statusBarNoFolderBackground": "#1f1f1f"
         },
         "layoutInfo": {
             "sideBarSide": "left",
             "editorPartMinWidth": 220,
-            "titleBarHeight": 30,
+            "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 0,
+            "sideBarWidth": 256,
+            "auxiliarySideBarWidth": 0,
             "statusBarHeight": 22,
             "windowBorder": false
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "c:\\Users\\pscha\\Documents\\Visual_Studio_Code\\Projects\\PythonApps\\PythonApps\\Backups\\1686330382043",
+            "backupPath": "C:\\Users\\pscha\\Documents\\Visual_Studio_Code\\Projects\\PythonApps\\PythonApps\\Backups\\1686330382043",
             "uiState": {
                 "mode": 1,
                 "x": 448,
@@ -59,5 +60,7 @@
             }
         },
         "openedWindows": []
-    }
+    },
+    "telemetry.sqmId": "{A23EBFC7-E5ED-42AD-A2B8-343CD4013163}",
+    "telemetry.devDeviceId": "a980acfb-a634-44e9-ab26-09934be3e76b"
 }

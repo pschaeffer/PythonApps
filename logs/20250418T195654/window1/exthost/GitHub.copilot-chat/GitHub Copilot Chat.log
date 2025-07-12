@@ -1,0 +1,41 @@
+2025-04-18 19:57:06.803 [info] Using the Electron fetcher.
+2025-04-18 19:57:06.803 [info] Initializing Git extension service.
+2025-04-18 19:57:06.804 [info] Successfully activated the vscode.git extension.
+2025-04-18 19:57:06.804 [info] Enablement state of the vscode.git extension: true.
+2025-04-18 19:57:06.804 [info] Successfully registered Git commit message provider.
+2025-04-18 19:57:06.842 [warning] GitHub login failed
+2025-04-18 19:57:06.844 [info] copilot token chat_enabled: undefined, sku: 
+2025-04-18 19:57:07.691 [warning] GitHub login failed
+2025-04-18 19:57:07.696 [error] Error: GitHubLoginFailed
+    at lT._authShowWarnings (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:480:55501)
+    at lT.getCopilotToken (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:480:54029)
+    at U5.getCopilotToken (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:423:3590)
+    at yB.waitForChatEnabled (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:441:17603)
+    at yB.run (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:441:17487)
+    at nk.askToUpgradeAuthPermissions (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:441:16858): Failed to get copilot token
+2025-04-18 19:57:07.697 [error] You are not signed in to GitHub. Please sign in to use Copilot.
+2025-04-18 19:57:07.697 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2025-04-18 19:57:07.697 [error] Error: GitHubLoginFailed
+    at lT._authShowWarnings (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:480:55501)
+    at lT.getCopilotToken (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:480:54029)
+    at U5.getCopilotToken (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:423:3590)
+    at Jk._getAuthSession (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:479:3082)
+    at Object.o [as task] (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:479:738)
+    at kp._processQueue (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:474:3192971)
+2025-04-18 19:57:07.697 [warning] [LanguageModelAccess] LanguageModel/Embeddings are not available without auth token
+2025-04-18 19:57:07.697 [error] Error: GitHubLoginFailed
+    at lT._authShowWarnings (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:480:55501)
+    at lT.getCopilotToken (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:480:54029)
+    at U5.getCopilotToken (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:423:3590)
+    at Jk._getAuthSession (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:479:3082)
+    at t (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:479:2545)
+    at Jk._registerEmbeddings (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:479:3044)
+    at async Promise.all (index 1)
+    at async Promise.allSettled (index 0)
+    at $b.waitForActivationBlockers (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:423:2191)
+    at c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:2334:5536
+    at ioo (c:\Users\pscha\.vscode\extensions\github.copilot-chat-0.26.5\dist\extension.js:2334:5349)
+    at cw.n (file:///c:/Users/pscha/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:111:13359)
+    at cw.m (file:///c:/Users/pscha/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:111:13322)
+    at cw.l (file:///c:/Users/pscha/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:111:12778)
+2025-04-18 19:57:07.697 [info] activationBlocker from 'languageModelAccess' took for 101ms

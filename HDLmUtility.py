@@ -6,6 +6,7 @@
 from   HDLmConfigInfo import *
 from   HDLmDefines    import *
 from   HDLmError      import *
+from   HDLmFileObj    import *
 from   HDLmGlobals    import *
 from   HDLmStateInfo  import *
 from   HDLmString     import *
@@ -13,6 +14,7 @@ from   io             import BytesIO
 import json
 import os
 import pycurl
+import subprocess
 import sys
 import urllib.parse
 
@@ -45,6 +47,11 @@ class HDLmUtility(object):
     queryStr += "'"
     queryStr += ']]]'
     return queryStr 
+  # Change the current working directory to the value passed by the caller
+  @staticmethod
+  def changeDirectory(directoryValue):
+    os.chdir(directoryValue)
+    return
   # The method below converts whatever is passed to it, to
   # JSON. A special routine is provided for things that can
   # not be directly converted to JSON. Note that objects and
@@ -71,7 +78,28 @@ class HDLmUtility(object):
     if typeStrFirst == 'enum':
       return str(value)
     # All other values are converted to a dictionary (for now)
-    return value.__dict__
+    return value.__dict__  
+  # Execute a command using Popen and return all of the values 
+  @staticmethod
+  def executeCommandPoGetRetCode(commandStr):
+    # Run the command and get the return code. Some testing has
+    # shown that the specification of powershell is absolutely
+    # required. The flags force a detached process to be created.
+    # The detached process continues to execute after the parent 
+    # Python process exits. 
+    flagsValue = subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP | subprocess.CREATE_NO_WINDOW
+    retValues = subprocess.Popen(['powershell', commandStr], shell = True, creationflags = flagsValue)
+    # Get the return code
+    retCode = retValues.returncode
+    return retValues
+  # Execute a command using the PowerShell and return the return code 
+  @staticmethod
+  def executeCommandPsGetRetCode(commandStr):
+    # Run the command and get the return code
+    retValues = subprocess.run(['powershell', commandStr])
+    # Get the return code
+    retCode = retValues.returncode
+    return retCode
   # Get the content string from the current configuation 
   @staticmethod
   def getContentString(): 
@@ -128,6 +156,11 @@ class HDLmUtility(object):
       typeLen = len(typeString)
       typeString = typeString[:typeLen-4]
     return typeString
+  # Get the current working directory and return it to the caller
+  @staticmethod
+  def getCwd():
+    cwdStr = os.getcwd() 
+    return cwdStr
   # The method below gets the files in a directory. The files
   # are returned to the caller in a list. The call must pass 
   # the path to the directory.  
@@ -248,6 +281,19 @@ class HDLmUtility(object):
       print('File ({}) caused exception'.format(fileName) + '\n  ' + str(e))
       raise
     return rv
+  # Read all of the files in the list passed by the caller.
+  # Create an object for each file.
+  @staticmethod
+  def readFiles(fileNames):
+    outFiles = []
+    # Handle each file
+    for fileName in fileNames:
+      # Read the file from the file system
+      lineList = HDLmUtility.readInputFile(fileName, 'iso-8859-1')
+      fileInstance = HDLmFileObj(fileName, lineList)
+      # Add the file object to the list of file objects
+      outFiles.append(fileInstance)
+    return outFiles  
   # The next routine takes an input URL and removes the protocol
   # and the host name from it (if they are present). The returned
   # value is the path string followed by the search string followed

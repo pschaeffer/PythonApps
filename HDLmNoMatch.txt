@@ -97,9 +97,6 @@ Possible variable Change
         "        \"Change Add To Cart\"" +
         "        \"Change Banner\"," +
         "        \"Change Add To Cart\"" +
-Possible variable Choice
-      newLine = "            HDLmBuildError('Error', 'Choice', 63, errorText);";
-      newLine = "            HDLmBuildError('Error', 'Choice', 63, errorText);";
 Possible variable Content
     builder.addLine("    httpReq.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');");
     builder.addLine("    httpReq.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');");
@@ -135,15 +132,11 @@ Possible variable Error
     builder.addLine("        HDLmBuildError('Error', 'NodeIden', 40, errorText);");
     builder.addLine("        let builtStr = 'Modification (' + nameStr + ') Host (' + hostNameStr + ') Error (' + errorStr + ')';");
     builder.addLine("        let builtStr = 'Modification (' + nameStr + ') Host (' + hostNameStr + ') Error (' + errorStr + ')';");
-      newLine = "            HDLmBuildError('Error', 'Choice', 63, errorText);";
-      newLine = "        HDLmBuildError('Error', 'RuleName', 62, errorText);";
     builder.addLine("            HDLmBuildError('Error', 'Mod', 16, errorText);");
     builder.addLine("          HDLmBuildError('Error', 'Mod', 31, errorText);");
     builder.addLine("        HDLmBuildError('Error', 'NodeIden', 40, errorText);");
     builder.addLine("        let builtStr = 'Modification (' + nameStr + ') Host (' + hostNameStr + ') Error (' + errorStr + ')';");
     builder.addLine("        let builtStr = 'Modification (' + nameStr + ') Host (' + hostNameStr + ') Error (' + errorStr + ')';");
-      newLine = "            HDLmBuildError('Error', 'Choice', 63, errorText);";
-      newLine = "        HDLmBuildError('Error', 'RuleName', 62, errorText);";
 Possible variable F
     builder.addLine("    inStr = inStr.replace(/F/g,'\u0e8a');");
     builder.addLine("    inStr = inStr.replace(/F/g,'\u0e8a');");
@@ -153,6 +146,9 @@ Possible variable FIXIFRAMESRC
 Possible variable Finds
     builder.addLine("        postTrace.findtype = 'Finds';");
     builder.addLine("        postTrace.findtype = 'Finds';");
+Possible variable Fired
+    builder.addLine("            matchError = 'Fired';");
+    builder.addLine("            matchError = 'Fired';");
 Possible variable G
     builder.addLine("    inStr = inStr.replace(/G/g,'\u0e8d');");
     builder.addLine("    inStr = inStr.replace(/G/g,'\u0e8d');");
@@ -227,15 +223,10 @@ Possible variable HDLmDefines
     builder.addLine("    let urlStr = '" + protocolStringLower + "://' + serverNameValue + '/" + HDLmDefines.getString("HDLMPOSTDATA") + "';");
     String  modificationName = HDLmDefines.getString("HDLMLOADPAGEMODNAME");
 Possible variable HDLmExecute
-    builder.addLine("              let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
+    builder.addLine("                let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
           newLine = "  function HDLmExecute" + newName + i + "() {";
-        newLine = "            HDLmExecute" + curModNameInternal + i + "();";
-    builder.addLine("              let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
+    builder.addLine("                let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
           newLine = "  function HDLmExecute" + newName + i + "() {";
-        newLine = "            HDLmExecute" + curModNameInternal + i + "();";
-Possible variable HDLmExecuteSwitch
-    newLine = "  function HDLmExecuteSwitch(modName, choiceNumber) {";
-    newLine = "  function HDLmExecuteSwitch(modName, choiceNumber) {";
 Possible variable HDLmJson
     	String  jsonHostName = HDLmJson.getJsonString(indexJsonElement, "website");
     		JsonArray   rulesJsonArray = HDLmJson.getJsonArray(indexJsonElement, "rules");
@@ -256,19 +247,13 @@ Possible variable HDLmMod
     for (HDLmMod mod: mods) {
     for (HDLmMod mod: mods) {
     	String  newName = HDLmMod.replaceInString(mod.getName());
-    for (HDLmMod mod: mods) {
-    	String  curModNameInternal = HDLmMod.replaceInString(curModName);
                                     ArrayList<HDLmMod> mods, 
     for (HDLmMod mod: mods) {
     for (HDLmMod mod: mods) {
     	String  newName = HDLmMod.replaceInString(mod.getName());
-    for (HDLmMod mod: mods) {
-    	String  curModNameInternal = HDLmMod.replaceInString(curModName);
 Possible variable HDLmModTypes
     	if (mod.getType() != HDLmModTypes.SCRIPT)
-    	if (mod.getType() != HDLmModTypes.SCRIPT)
     String  modificationType = HDLmModTypes.VISIT.toString().toLowerCase();
-    	if (mod.getType() != HDLmModTypes.SCRIPT)
     	if (mod.getType() != HDLmModTypes.SCRIPT)
     String  modificationType = HDLmModTypes.VISIT.toString().toLowerCase();
 Possible variable HDLmPHashCache
@@ -298,6 +283,11 @@ Possible variable HDLmSessionDebugRulesEnabled
 Possible variable HDLmSessionId
     builder.addLine("            let newText = nodeURL.href + '&HDLmSessionId=' + sessionIdJS;");
     builder.addLine("            let newText = nodeURL.href + '&HDLmSessionId=' + sessionIdJS;");
+Possible variable HDLmSessionIgnoreProbability
+    builder.addLine("      sessionStorage.setItem(\"HDLmSessionIgnoreProbability\", 'true');");
+    builder.addLine("        let ignoreProbability = sessionStorage.getItem('HDLmSessionIgnoreProbability');");
+    builder.addLine("      sessionStorage.setItem(\"HDLmSessionIgnoreProbability\", 'true');");
+    builder.addLine("        let ignoreProbability = sessionStorage.getItem('HDLmSessionIgnoreProbability');");
 Possible variable HDLmSessionPostRuleTracingEnabled
     builder.addLine("      sessionStorage.setItem(\"HDLmSessionPostRuleTracingEnabled\", 'true');");
     builder.addLine("    if (sessionStorage.getItem('HDLmSessionPostRuleTracingEnabled') == 'true')");
@@ -342,12 +332,8 @@ Possible variable In
 Possible variable Invalid
     builder.addLine("          let errorText = \"Invalid modification type value - \" + curType;");
     builder.addLine("        let errorText = \"Invalid node identifier type value - \" + nodeType;");
-      newLine = "            let errorText = \"Invalid choice value - \" + choiceNumber" + ";";
-      newLine = "        let errorText = \"Invalid rule name value - \" + modName;";
     builder.addLine("          let errorText = \"Invalid modification type value - \" + curType;");
     builder.addLine("        let errorText = \"Invalid node identifier type value - \" + nodeType;");
-      newLine = "            let errorText = \"Invalid choice value - \" + choiceNumber" + ";";
-      newLine = "        let errorText = \"Invalid rule name value - \" + modName;";
 Possible variable J
     builder.addLine("    inStr = inStr.replace(/J/g,'\u0e99');");
     builder.addLine("    inStr = inStr.replace(/J/g,'\u0e99');");
@@ -453,9 +439,11 @@ Possible variable Map
     Map<String, String>  mapObj = HDLmPHashCache.getMap();
 		for (Map.Entry<String, String> entry: mapObj.entrySet()) {
 Possible variable Math
+    builder.addLine("        let localRandomValue = Math.random();");
     builder.addLine("            finalLookupIndex = Math.floor(newCount * lookupValue);");
     builder.addLine("            finalLookupIndex = Math.min(finalLookupIndex, newCount - 1);");
         	int         indexValueInt = (int) Math.floor(indexValue);
+    builder.addLine("        let localRandomValue = Math.random();");
     builder.addLine("            finalLookupIndex = Math.floor(newCount * lookupValue);");
     builder.addLine("            finalLookupIndex = Math.min(finalLookupIndex, newCount - 1);");
         	int         indexValueInt = (int) Math.floor(indexValue);
@@ -591,6 +579,7 @@ Possible variable O
     builder.addLine("    inStr = inStr.replace(/O/g,'\u0ea7');");
 Possible variable Object
     builder.addLine("      let postTrace = new Object();");
+    builder.addLine("            let localUpdates = new Object();");
     builder.addLine("          let localUpdates = new Object();");
     builder.addLine("          let localUpdates = new Object();");
     builder.addLine("          let   localUpdates = new Object();");
@@ -614,6 +603,7 @@ Possible variable Object
     builder.addLine("  let HDLmSavedExtracts = new Object();");
     builder.addLine("  let HDLmSavedNotifies = new Object();");
     builder.addLine("      let postTrace = new Object();");
+    builder.addLine("            let localUpdates = new Object();");
     builder.addLine("          let localUpdates = new Object();");
     builder.addLine("          let localUpdates = new Object();");
     builder.addLine("          let   localUpdates = new Object();");
@@ -659,9 +649,6 @@ Possible variable R
 Possible variable RegExp
     builder.addLine("        matchRe = new RegExp(curMod.path.substr(2, curModLen-3));");
     builder.addLine("        matchRe = new RegExp(curMod.path.substr(2, curModLen-3));");
-Possible variable RuleName
-      newLine = "        HDLmBuildError('Error', 'RuleName', 62, errorText);";
-      newLine = "        HDLmBuildError('Error', 'RuleName', 62, errorText);";
 Possible variable S
     builder.addLine("    inStr = inStr.replace(/S/g,'\u0eb9');");
     builder.addLine("    inStr = inStr.replace(/S/g,'\u0eb9');");
@@ -712,8 +699,6 @@ Possible variable String
           ArrayList<String>   curValues = new ArrayList<String>(Arrays.asList(curValue.split("/n")));
           ArrayList<String>   curValues = new ArrayList<String>(Arrays.asList(curValue.split("/n")));
             String  curLine = curValues.get(j);
-    	String  curModName = mod.getName();
-    	String  curModNameInternal = HDLmMod.replaceInString(curModName);
 	 	  String  errorText = "JSON array in getJSBuildJs is invalid";
     	String  jsonHostName = HDLmJson.getJsonString(indexJsonElement, "website");
     	 	  String  errorText = "JSON array in getJSBuildJs is invalid";
@@ -765,8 +750,6 @@ Possible variable String
           ArrayList<String>   curValues = new ArrayList<String>(Arrays.asList(curValue.split("/n")));
           ArrayList<String>   curValues = new ArrayList<String>(Arrays.asList(curValue.split("/n")));
             String  curLine = curValues.get(j);
-    	String  curModName = mod.getName();
-    	String  curModNameInternal = HDLmMod.replaceInString(curModName);
 	 	  String  errorText = "JSON array in getJSBuildJs is invalid";
     	String  jsonHostName = HDLmJson.getJsonString(indexJsonElement, "website");
     	 	  String  errorText = "JSON array in getJSBuildJs is invalid";
@@ -792,6 +775,9 @@ Possible variable StringBuilder
 		  StringBuilder   actualJSAdjustedBuilder = new StringBuilder();
 		  StringBuilder   actualJSAdjustedBuilder = new StringBuilder();
 		  StringBuilder   actualJSAdjustedBuilder = new StringBuilder();
+Possible variable SuppressWarnings
+  @SuppressWarnings("unused")
+  @SuppressWarnings("unused")
 Possible variable T
     builder.addLine("    inStr = inStr.replace(/T/g,'\u0ebb');");
     builder.addLine("    inStr = inStr.replace(/T/g,'\u0ebb');");
@@ -1048,6 +1034,7 @@ Possible variable boolean
     builder.addLine("          typeValue == 'boolean' ||");
     boolean   logIsDebugEnabled = LOG.isDebugEnabled();
 Possible variable break
+    builder.addLine("          break;");
     builder.addLine("        break;");
     builder.addLine("        break;");
     builder.addLine("        break;");
@@ -1118,9 +1105,7 @@ Possible variable break
     builder.addLine("            break;");
     builder.addLine("            break;");
     builder.addLine("            break;");
-        newLine = "            break;";
-      newLine = "            break;";
-      newLine = "        break;";
+    builder.addLine("          break;");
     builder.addLine("        break;");
     builder.addLine("        break;");
     builder.addLine("        break;");
@@ -1191,9 +1176,6 @@ Possible variable break
     builder.addLine("            break;");
     builder.addLine("            break;");
     builder.addLine("            break;");
-        newLine = "            break;";
-      newLine = "            break;";
-      newLine = "        break;";
 Possible variable builder
     HDLmBuildLines  builder;
     builder = new HDLmBuildLines("JS");
@@ -1214,6 +1196,8 @@ Possible variable builder
     builder.addLine("      HDLmToggleStyleSheetEnablement();");
     builder.addLine("    if (event.key == 'q' && event.ctrlKey == true)");
     builder.addLine("      sessionStorage.setItem(\"HDLmSessionPostRuleTracingEnabled\", 'true');");
+    builder.addLine("    if (event.key == 'x' && event.ctrlKey == true)");
+    builder.addLine("      sessionStorage.setItem(\"HDLmSessionIgnoreProbability\", 'true');");
     builder.addLine("  });");
     builder.addLine("  function HDLmApplyMod(pathValueStr,");
     builder.addLine("                        curMod,");
@@ -1246,6 +1230,27 @@ Possible variable builder
     builder.addLine("    let curType = curMod.type;");
     builder.addLine("    while (true) {");
     builder.addLine("      let postTrace = new Object();");
+    builder.addLine("      if (curMod.prob < 100.0) {");
+    builder.addLine("        let localRandomValue = Math.random();");
+    builder.addLine("        let ignoreProbability = sessionStorage.getItem('HDLmSessionIgnoreProbability');");
+    builder.addLine("        if (ignoreProbability == null)");
+    builder.addLine("          ignoreProbability = 'false';");
+    builder.addLine("        if (localRandomValue * 100.0 > curMod.prob &&");
+    builder.addLine("            ignoreProbability != 'true') {");
+    builder.addLine("          matchError = 'probability';");
+    builder.addLine("          if (postRuleTracing == true) {");
+    builder.addLine("            let localUpdates = new Object();");
+    builder.addLine("            HDLmSaveChange(localUpdates, null,");
+    builder.addLine("                          sessionIndexValue, parametersArray, sessionIdJS,");
+    builder.addLine("                          null, null,");
+    builder.addLine("                          hostNameValue, divisionNameValue, siteNameValue, curMod.name,");
+    builder.addLine("                          curMod.path, curMod.type, pathValueStr, null, null);");
+    builder.addLine("            postTrace.matcherror = matchError;");
+    builder.addLine("            HDLmSendUpdates(localUpdates, 'failure', '1.0', postTrace);");
+    builder.addLine("          }");
+    builder.addLine("          break;");
+    builder.addLine("        }");
+    builder.addLine("      }");
     builder.addLine("      if (curMod.enabled != true) {");
     builder.addLine("        matchError = 'disabled';");
     builder.addLine("        if (postRuleTracing == true) {");
@@ -1588,6 +1593,7 @@ Possible variable builder
     builder.addLine("            break;");
     builder.addLine("          }");
     builder.addLine("          for (let i = 0; i < nodeListLength; i++) {");
+    builder.addLine("            matchError = 'Fired';");
     builder.addLine("            let curNode = nodeList[i];");
     builder.addLine("            let curModExtra = curMod.extra;");
     builder.addLine("            HDLmClassAddSpecialClass(curNode, curType, curModExtra);");
@@ -1784,9 +1790,12 @@ Possible variable builder
     builder.addLine("                parentNode.replaceChild(newNode, curNode);");
     builder.addLine("              }");
     builder.addLine("            }");
-    builder.addLine("            else if (curType == 'script' && readyState == 'complete') {");
-    builder.addLine("              let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
-    builder.addLine("              window[functionStr]();");
+    builder.addLine("            else if (curType == 'script') {");
+    builder.addLine("              if (readyState == 'complete') {");
+    builder.addLine("                let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
+    builder.addLine("                window[functionStr]();");
+    builder.addLine("              }");
+    builder.addLine("              matchError = readyState;");
     builder.addLine("            }");
     builder.addLine("            else if (curType == 'style') {");
     builder.addLine("              if (curModExtra == 'background-image') {");
@@ -1835,7 +1844,7 @@ Possible variable builder
     builder.addLine("                           hostNameValue, divisionNameValue, siteNameValue, curMod.name,");
     builder.addLine("                           curMod.path, curMod.type, pathValueStr,");
     builder.addLine("                           oldText, newText);");
-    builder.addLine("            postTrace.matcherror = 'fired';");
+    builder.addLine("            postTrace.matcherror = matchError;");
     builder.addLine("            HDLmSendUpdates(localUpdates, curType, '1.0', postTrace);");
     builder.addLine("            break;");
     builder.addLine("          }");
@@ -3022,7 +3031,7 @@ Possible variable builder
     builder.addLine("                   curMod.path, curMod.type, pathValueStr,");
     builder.addLine("                   oldText, newText);");
     builder.addLine("    let localReason = curMod.type;");
-    builder.addLine("    postTrace.matcherror = 'fired';");
+    builder.addLine("    postTrace.matcherror = 'visit';");
     builder.addLine("    HDLmSendUpdates(localUpdates, localReason, '1.0', postTrace);");
     builder.addLine("    return countHigh;");
     builder.addLine("  }");
@@ -3341,24 +3350,6 @@ Possible variable builder
           builder.addLine(newLine);
             builder.addLine("    " + curLine);
           builder.addLine(newLine);
-		builder.addLine(newLine);
-		builder.addLine(newLine);
-		  builder.addLine(newLine);
-		  builder.addLine(newLine);
-		  builder.addLine(newLine);
-		    builder.addLine(newLine);
-		    builder.addLine(newLine);
-	  	builder.addLine(newLine);
-  		builder.addLine(newLine);
-	  	builder.addLine(newLine);
-	  	builder.addLine(newLine);
-	  	builder.addLine(newLine);
-	  	builder.addLine(newLine);
-  		builder.addLine(newLine);
-	  	builder.addLine(newLine);
-	  	builder.addLine(newLine);
-		builder.addLine(newLine);
-		builder.addLine(newLine);
     builder.addLine("  function HDLmGetAttributesString(curNode) {");
     builder.addLine("    let outputStr = '';");
     builder.addLine("    if (!curNode.hasAttributes())");
@@ -3504,6 +3495,8 @@ Possible variable builder
     builder.addLine("      HDLmToggleStyleSheetEnablement();");
     builder.addLine("    if (event.key == 'q' && event.ctrlKey == true)");
     builder.addLine("      sessionStorage.setItem(\"HDLmSessionPostRuleTracingEnabled\", 'true');");
+    builder.addLine("    if (event.key == 'x' && event.ctrlKey == true)");
+    builder.addLine("      sessionStorage.setItem(\"HDLmSessionIgnoreProbability\", 'true');");
     builder.addLine("  });");
     builder.addLine("  function HDLmApplyMod(pathValueStr,");
     builder.addLine("                        curMod,");
@@ -3536,6 +3529,27 @@ Possible variable builder
     builder.addLine("    let curType = curMod.type;");
     builder.addLine("    while (true) {");
     builder.addLine("      let postTrace = new Object();");
+    builder.addLine("      if (curMod.prob < 100.0) {");
+    builder.addLine("        let localRandomValue = Math.random();");
+    builder.addLine("        let ignoreProbability = sessionStorage.getItem('HDLmSessionIgnoreProbability');");
+    builder.addLine("        if (ignoreProbability == null)");
+    builder.addLine("          ignoreProbability = 'false';");
+    builder.addLine("        if (localRandomValue * 100.0 > curMod.prob &&");
+    builder.addLine("            ignoreProbability != 'true') {");
+    builder.addLine("          matchError = 'probability';");
+    builder.addLine("          if (postRuleTracing == true) {");
+    builder.addLine("            let localUpdates = new Object();");
+    builder.addLine("            HDLmSaveChange(localUpdates, null,");
+    builder.addLine("                          sessionIndexValue, parametersArray, sessionIdJS,");
+    builder.addLine("                          null, null,");
+    builder.addLine("                          hostNameValue, divisionNameValue, siteNameValue, curMod.name,");
+    builder.addLine("                          curMod.path, curMod.type, pathValueStr, null, null);");
+    builder.addLine("            postTrace.matcherror = matchError;");
+    builder.addLine("            HDLmSendUpdates(localUpdates, 'failure', '1.0', postTrace);");
+    builder.addLine("          }");
+    builder.addLine("          break;");
+    builder.addLine("        }");
+    builder.addLine("      }");
     builder.addLine("      if (curMod.enabled != true) {");
     builder.addLine("        matchError = 'disabled';");
     builder.addLine("        if (postRuleTracing == true) {");
@@ -3878,6 +3892,7 @@ Possible variable builder
     builder.addLine("            break;");
     builder.addLine("          }");
     builder.addLine("          for (let i = 0; i < nodeListLength; i++) {");
+    builder.addLine("            matchError = 'Fired';");
     builder.addLine("            let curNode = nodeList[i];");
     builder.addLine("            let curModExtra = curMod.extra;");
     builder.addLine("            HDLmClassAddSpecialClass(curNode, curType, curModExtra);");
@@ -4074,9 +4089,12 @@ Possible variable builder
     builder.addLine("                parentNode.replaceChild(newNode, curNode);");
     builder.addLine("              }");
     builder.addLine("            }");
-    builder.addLine("            else if (curType == 'script' && readyState == 'complete') {");
-    builder.addLine("              let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
-    builder.addLine("              window[functionStr]();");
+    builder.addLine("            else if (curType == 'script') {");
+    builder.addLine("              if (readyState == 'complete') {");
+    builder.addLine("                let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
+    builder.addLine("                window[functionStr]();");
+    builder.addLine("              }");
+    builder.addLine("              matchError = readyState;");
     builder.addLine("            }");
     builder.addLine("            else if (curType == 'style') {");
     builder.addLine("              if (curModExtra == 'background-image') {");
@@ -4125,7 +4143,7 @@ Possible variable builder
     builder.addLine("                           hostNameValue, divisionNameValue, siteNameValue, curMod.name,");
     builder.addLine("                           curMod.path, curMod.type, pathValueStr,");
     builder.addLine("                           oldText, newText);");
-    builder.addLine("            postTrace.matcherror = 'fired';");
+    builder.addLine("            postTrace.matcherror = matchError;");
     builder.addLine("            HDLmSendUpdates(localUpdates, curType, '1.0', postTrace);");
     builder.addLine("            break;");
     builder.addLine("          }");
@@ -5312,7 +5330,7 @@ Possible variable builder
     builder.addLine("                   curMod.path, curMod.type, pathValueStr,");
     builder.addLine("                   oldText, newText);");
     builder.addLine("    let localReason = curMod.type;");
-    builder.addLine("    postTrace.matcherror = 'fired';");
+    builder.addLine("    postTrace.matcherror = 'visit';");
     builder.addLine("    HDLmSendUpdates(localUpdates, localReason, '1.0', postTrace);");
     builder.addLine("    return countHigh;");
     builder.addLine("  }");
@@ -5631,24 +5649,6 @@ Possible variable builder
           builder.addLine(newLine);
             builder.addLine("    " + curLine);
           builder.addLine(newLine);
-		builder.addLine(newLine);
-		builder.addLine(newLine);
-		  builder.addLine(newLine);
-		  builder.addLine(newLine);
-		  builder.addLine(newLine);
-		    builder.addLine(newLine);
-		    builder.addLine(newLine);
-	  	builder.addLine(newLine);
-  		builder.addLine(newLine);
-	  	builder.addLine(newLine);
-	  	builder.addLine(newLine);
-	  	builder.addLine(newLine);
-	  	builder.addLine(newLine);
-  		builder.addLine(newLine);
-	  	builder.addLine(newLine);
-	  	builder.addLine(newLine);
-		builder.addLine(newLine);
-		builder.addLine(newLine);
     builder.addLine("  function HDLmGetAttributesString(curNode) {");
     builder.addLine("    let outputStr = '';");
     builder.addLine("    if (!curNode.hasAttributes())");
@@ -5810,8 +5810,6 @@ Possible variable case
     builder.addLine("      case 'name': {");
     builder.addLine("          case 'extract': {");
     builder.addLine("          case 'notify': {");
-      newLine = "      case '" + curModName + "':";
-      newLine = "          case " + i + ":";
     builder.addLine("        case 'attribute': {");
     builder.addLine("        case 'extract': {");
     builder.addLine("        case 'modify': {");
@@ -5846,8 +5844,6 @@ Possible variable case
     builder.addLine("      case 'name': {");
     builder.addLine("          case 'extract': {");
     builder.addLine("          case 'notify': {");
-      newLine = "      case '" + curModName + "':";
-      newLine = "          case " + i + ":";
 Possible variable catch
     builder.addLine("      catch (errorObj) {");
     builder.addLine("      catch (errorObj) {");
@@ -5880,9 +5876,6 @@ Possible variable char
 Possible variable childList
     builder.addLine("  let HDLmObsConfig = {attributes: true, childList: true, subtree: true};");
     builder.addLine("  let HDLmObsConfig = {attributes: true, childList: true, subtree: true};");
-Possible variable choice
-      newLine = "            let errorText = \"Invalid choice value - \" + choiceNumber" + ";";
-      newLine = "            let errorText = \"Invalid choice value - \" + choiceNumber" + ";";
 Possible variable choiceJsonArray
     		JsonArray   choiceJsonArray = null;
         	choiceJsonArray = (JsonArray) choicesJsonArray.get(indexValueInt);
@@ -5904,13 +5897,6 @@ Possible variable choiceJsonString
             newLine += choiceJsonString;
             String  choiceJsonString = choiceJsonElement.getAsString();
             newLine += choiceJsonString;
-Possible variable choiceNumber
-    newLine = "  function HDLmExecuteSwitch(modName, choiceNumber) {";
-      newLine = "        switch (choiceNumber) {";
-      newLine = "            let errorText = \"Invalid choice value - \" + choiceNumber" + ";";
-    newLine = "  function HDLmExecuteSwitch(modName, choiceNumber) {";
-      newLine = "        switch (choiceNumber) {";
-      newLine = "            let errorText = \"Invalid choice value - \" + choiceNumber" + ";";
 Possible variable choices
     		JsonArray   choicesJsonArray = HDLmJson.getJsonArray(indexJsonElement, "choices");
         "    \"choices\":" +
@@ -5985,10 +5971,10 @@ Possible variable comparison
     builder.addLine("            errorText = `Node identifier - key (${nodeAttributeKey}) comparison value (${traceValue})`;");
 Possible variable complete
     builder.addLine("              if (readyState == 'complete')");
-    builder.addLine("            else if (curType == 'script' && readyState == 'complete') {");
+    builder.addLine("              if (readyState == 'complete') {");
     builder.addLine("    if (document.readyState == 'complete' ||");
     builder.addLine("              if (readyState == 'complete')");
-    builder.addLine("            else if (curType == 'script' && readyState == 'complete') {");
+    builder.addLine("              if (readyState == 'complete') {");
     builder.addLine("    if (document.readyState == 'complete' ||");
 Possible variable console
     builder.addLine("        console.log(errorObj);");
@@ -6057,7 +6043,6 @@ Possible variable continue
     builder.addLine("                continue;");
     builder.addLine("        continue;");
         continue;
-        continue;
     builder.addLine("                continue;");
     builder.addLine("                    continue;");
     builder.addLine("        continue;");
@@ -6087,7 +6072,6 @@ Possible variable continue
     builder.addLine("                continue;"); 
     builder.addLine("                continue;");
     builder.addLine("        continue;");
-        continue;
         continue;
 Possible variable counter
     int         counter;
@@ -6250,18 +6234,6 @@ Possible variable curLine
             builder.addLine("    " + curLine);
             String  curLine = curValues.get(j);
             builder.addLine("    " + curLine);
-Possible variable curModName
-    	String  curModName = mod.getName();
-      newLine = "      case '" + curModName + "':";
-    	String  curModNameInternal = HDLmMod.replaceInString(curModName);
-    	String  curModName = mod.getName();
-      newLine = "      case '" + curModName + "':";
-    	String  curModNameInternal = HDLmMod.replaceInString(curModName);
-Possible variable curModNameInternal
-    	String  curModNameInternal = HDLmMod.replaceInString(curModName);
-        newLine = "            HDLmExecute" + curModNameInternal + i + "();";
-    	String  curModNameInternal = HDLmMod.replaceInString(curModName);
-        newLine = "            HDLmExecute" + curModNameInternal + i + "();";
 Possible variable curValues
           ArrayList<String>   curValues = new ArrayList<String>(Arrays.asList(curValue.split("/n")));
           for (int j = 0; j < curValues.size(); j++) {
@@ -6283,14 +6255,10 @@ Possible variable default
     builder.addLine("        default: {");
     builder.addLine("      default: {");
     builder.addLine("          default: {");
-      newLine = "          default:";
-      newLine = "      default:";
     builder.addLine("        default: {");
     builder.addLine("        default: {");
     builder.addLine("      default: {");
     builder.addLine("          default: {");
-      newLine = "          default:";
-      newLine = "      default:";
 Possible variable delete
     builder.addLine("        delete searchAttrs['innertext'];");
     builder.addLine("        delete searchAttrs['innertext'];");
@@ -6406,7 +6374,7 @@ Possible variable else
     builder.addLine("            else if (curType == 'order') {");
     builder.addLine("            else if (curType == 'remove') {");
     builder.addLine("            else if (curType == 'replace') {");
-    builder.addLine("            else if (curType == 'script' && readyState == 'complete') {");
+    builder.addLine("            else if (curType == 'script') {");
     builder.addLine("            else if (curType == 'style') {");
     builder.addLine("                else if (newData.startsWith('data:')) {");
     builder.addLine("                else if (newData.startsWith('http')) {");
@@ -6534,7 +6502,7 @@ Possible variable else
     builder.addLine("            else if (curType == 'order') {");
     builder.addLine("            else if (curType == 'remove') {");
     builder.addLine("            else if (curType == 'replace') {");
-    builder.addLine("            else if (curType == 'script' && readyState == 'complete') {");
+    builder.addLine("            else if (curType == 'script') {");
     builder.addLine("            else if (curType == 'style') {");
     builder.addLine("                else if (newData.startsWith('data:')) {");
     builder.addLine("                else if (newData.startsWith('http')) {");
@@ -6658,6 +6626,8 @@ Possible variable event
     builder.addLine("    if (event.key == 'm' && event.ctrlKey == true)");
     builder.addLine("    if (event.key == 'q' && event.ctrlKey == true)");
     builder.addLine("    if (event.key == 'q' && event.ctrlKey == true)");
+    builder.addLine("    if (event.key == 'x' && event.ctrlKey == true)");
+    builder.addLine("    if (event.key == 'x' && event.ctrlKey == true)");
     builder.addLine("        window.addEventListener(key.slice(2), event => {");  
     builder.addLine("          let eventName = HDLmGetObjectName(event);"); 
     builder.addLine("          let eventJson = HDLmGetJsonForEventObject(event, eventName, hostNameStr, pathNameStr, sessionIdValue)");
@@ -6670,6 +6640,8 @@ Possible variable event
     builder.addLine("    if (event.key == 'm' && event.ctrlKey == true)");
     builder.addLine("    if (event.key == 'q' && event.ctrlKey == true)");
     builder.addLine("    if (event.key == 'q' && event.ctrlKey == true)");
+    builder.addLine("    if (event.key == 'x' && event.ctrlKey == true)");
+    builder.addLine("    if (event.key == 'x' && event.ctrlKey == true)");
     builder.addLine("        window.addEventListener(key.slice(2), event => {");  
     builder.addLine("          let eventName = HDLmGetObjectName(event);"); 
     builder.addLine("          let eventJson = HDLmGetJsonForEventObject(event, eventName, hostNameStr, pathNameStr, sessionIdValue)");
@@ -6698,12 +6670,14 @@ Possible variable extract
     builder.addLine("            postTrace.matcherror = 'extract';");
     builder.addLine("          case 'extract': {");
 Possible variable failure
+    builder.addLine("            HDLmSendUpdates(localUpdates, 'failure', '1.0', postTrace);");
     builder.addLine("          HDLmSendUpdates(localUpdates, 'failure', '1.0', postTrace);");
     builder.addLine("          HDLmSendUpdates(localUpdates, 'failure', '1.0', postTrace);");
     builder.addLine("          HDLmSendUpdates(localUpdates, 'failure', '1.0', postTrace);");
     builder.addLine("              HDLmSendUpdates(localUpdates, 'failure', '1.0', postTrace);");
     builder.addLine("            HDLmSendUpdates(localUpdates, 'failure', '1.0', postTrace);");
     builder.addLine("        HDLmSendUpdates(localUpdates, 'failure', '1.0', postTrace);");
+    builder.addLine("            HDLmSendUpdates(localUpdates, 'failure', '1.0', postTrace);");
     builder.addLine("          HDLmSendUpdates(localUpdates, 'failure', '1.0', postTrace);");
     builder.addLine("          HDLmSendUpdates(localUpdates, 'failure', '1.0', postTrace);");
     builder.addLine("          HDLmSendUpdates(localUpdates, 'failure', '1.0', postTrace);");
@@ -6714,6 +6688,7 @@ Possible variable false
     boolean         useCreateFixedJS = false;
     builder.addLine("    let postRuleTracing = false;");
     builder.addLine("    let matchFound = false;");
+    builder.addLine("          ignoreProbability = 'false';");
     builder.addLine("      if (matchRes == false) {");
     builder.addLine("      let sessionIndexValueUsed = false;");
     builder.addLine("          let sendUpdates = false;");
@@ -6761,6 +6736,7 @@ Possible variable false
     boolean         useCreateFixedJS = false;
     builder.addLine("    let postRuleTracing = false;");
     builder.addLine("    let matchFound = false;");
+    builder.addLine("          ignoreProbability = 'false';");
     builder.addLine("      if (matchRes == false) {");
     builder.addLine("      let sessionIndexValueUsed = false;");
     builder.addLine("          let sendUpdates = false;");
@@ -6830,7 +6806,7 @@ Possible variable finalLookupIndex
     builder.addLine("            if (finalLookupIndex >= 0)");
     builder.addLine("              newText = newTexts[finalLookupIndex];");
     builder.addLine("              finalLookupIndex = i;");
-    builder.addLine("              let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
+    builder.addLine("                let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
     builder.addLine("      let finalLookupIndex = 0;");
     builder.addLine("        finalLookupIndex = tempLookupIndex;");
     builder.addLine("            finalLookupIndex = Math.floor(newCount * lookupValue);");
@@ -6839,12 +6815,7 @@ Possible variable finalLookupIndex
     builder.addLine("            if (finalLookupIndex >= 0)");
     builder.addLine("              newText = newTexts[finalLookupIndex];");
     builder.addLine("              finalLookupIndex = i;");
-    builder.addLine("              let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
-Possible variable fired
-    builder.addLine("            postTrace.matcherror = 'fired';");
-    builder.addLine("    postTrace.matcherror = 'fired';");
-    builder.addLine("            postTrace.matcherror = 'fired';");
-    builder.addLine("    postTrace.matcherror = 'fired';");
+    builder.addLine("                let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
 Possible variable fixedJSName
     String          fixedJSName = null;
     	fixedJSName = HDLmDefines.getString("HDLMFIXEDFILENAME");
@@ -6966,8 +6937,6 @@ Possible variable for
     for (HDLmMod mod: mods) {
         for (int i = 0; i < valueCount; i++) {
           for (int j = 0; j < curValues.size(); j++) {
-    for (HDLmMod mod: mods) {
-	  	for (int i = 0; i < valueCount; i++) {
     builder.addLine("    for (let i = attrsLength - 1; i >= 0; i--) {");
     for (int i=0; i < indexJsonArraySize; i++) {
         for (int j=0; j < rulesJsonArraySize; j++) {
@@ -7019,8 +6988,6 @@ Possible variable for
     for (HDLmMod mod: mods) {
         for (int i = 0; i < valueCount; i++) {
           for (int j = 0; j < curValues.size(); j++) {
-    for (HDLmMod mod: mods) {
-	  	for (int i = 0; i < valueCount; i++) {
     builder.addLine("    for (let i = attrsLength - 1; i >= 0; i--) {");
     for (int i=0; i < indexJsonArraySize; i++) {
         for (int j=0; j < rulesJsonArraySize; j++) {
@@ -7087,7 +7054,6 @@ Possible variable function
     builder.addLine("  function HDLmBuildError(errSeverity, curType, errNumber, errText) {");
     builder.addLine("  function HDLmChangeAttributes(curNode, jsonText) {");
           newLine = "  function HDLmExecute" + newName + i + "() {";
-    newLine = "  function HDLmExecuteSwitch(modName, choiceNumber) {";
     builder.addLine("  function HDLmGetAttributesString(curNode) {");
     builder.addLine("  function HDLmGetLookupIndex(ruleName) {");
     builder.addLine("  function HDLmGetParametersArray() {");
@@ -7148,7 +7114,6 @@ Possible variable function
     builder.addLine("  function HDLmBuildError(errSeverity, curType, errNumber, errText) {");
     builder.addLine("  function HDLmChangeAttributes(curNode, jsonText) {");
           newLine = "  function HDLmExecute" + newName + i + "() {";
-    newLine = "  function HDLmExecuteSwitch(modName, choiceNumber) {";
     builder.addLine("  function HDLmGetAttributesString(curNode) {");
     builder.addLine("  function HDLmGetLookupIndex(ruleName) {");
     builder.addLine("  function HDLmGetParametersArray() {");
@@ -7157,10 +7122,10 @@ Possible variable function
     builder.addLine("  function HDLmSendUpdates(savedUpdates, reasonStr, weightStr, errorStr) {");
     builder.addLine("  let HDLmObsCallback = function (mutationsList, HDLmObsObserver) {");
 Possible variable functionStr
-    builder.addLine("              let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
-    builder.addLine("              window[functionStr]();");
-    builder.addLine("              let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
-    builder.addLine("              window[functionStr]();");
+    builder.addLine("                let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
+    builder.addLine("                window[functionStr]();");
+    builder.addLine("                let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
+    builder.addLine("                window[functionStr]();");
 Possible variable g
     builder.addLine("    newText = newText.replace(/,/g, ' ');");
     builder.addLine("    let urlStrMod = urlStr.replace(/\\+/g, ' ');");
@@ -7487,11 +7452,6 @@ Possible variable i
         for (int i = 0; i < valueCount; i++) {
           String  curValue = mod.getValues().get(i);
           newLine = "  function HDLmExecute" + newName + i + "() {";
-	  	for (int i = 0; i < valueCount; i++) {
-	  	for (int i = 0; i < valueCount; i++) {
-	  	for (int i = 0; i < valueCount; i++) {
-      newLine = "          case " + i + ":";
-        newLine = "            HDLmExecute" + curModNameInternal + i + "();";
     builder.addLine("    for (let i = attrsLength - 1; i >= 0; i--) {");
     builder.addLine("    for (let i = attrsLength - 1; i >= 0; i--) {");
     builder.addLine("    for (let i = attrsLength - 1; i >= 0; i--) {");
@@ -7636,11 +7596,6 @@ Possible variable i
         for (int i = 0; i < valueCount; i++) {
           String  curValue = mod.getValues().get(i);
           newLine = "  function HDLmExecute" + newName + i + "() {";
-	  	for (int i = 0; i < valueCount; i++) {
-	  	for (int i = 0; i < valueCount; i++) {
-	  	for (int i = 0; i < valueCount; i++) {
-      newLine = "          case " + i + ":";
-        newLine = "            HDLmExecute" + curModNameInternal + i + "();";
     builder.addLine("    for (let i = attrsLength - 1; i >= 0; i--) {");
     builder.addLine("    for (let i = attrsLength - 1; i >= 0; i--) {");
     builder.addLine("    for (let i = attrsLength - 1; i >= 0; i--) {");
@@ -7711,9 +7666,14 @@ Possible variable if
     builder.addLine("    if (event.key == 'i' && event.ctrlKey == true)");
     builder.addLine("    if (event.key == 'm' && event.ctrlKey == true)");
     builder.addLine("    if (event.key == 'q' && event.ctrlKey == true)");
+    builder.addLine("    if (event.key == 'x' && event.ctrlKey == true)");
     builder.addLine("    if (sessionStorage.getItem('HDLmSessionDebugRulesEnabled') == 'true')");
     builder.addLine("    if (sessionStorage.getItem('HDLmSessionDebugNodeIdenEnabled') == 'all')");
     builder.addLine("    if (sessionStorage.getItem('HDLmSessionPostRuleTracingEnabled') == 'true')");
+    builder.addLine("      if (curMod.prob < 100.0) {");
+    builder.addLine("        if (ignoreProbability == null)");
+    builder.addLine("        if (localRandomValue * 100.0 > curMod.prob &&");
+    builder.addLine("          if (postRuleTracing == true) {");
     builder.addLine("      if (curMod.enabled != true) {");
     builder.addLine("        if (postRuleTracing == true) {");
     builder.addLine("      if (curMod.pathre === true) {");
@@ -7801,7 +7761,8 @@ Possible variable if
     builder.addLine("              if (HDLmCompareCaseInsensitive(newText, 'yes'))");
     builder.addLine("            else if (curType == 'replace') {");
     builder.addLine("              if (newText != '') {");
-    builder.addLine("            else if (curType == 'script' && readyState == 'complete') {");
+    builder.addLine("            else if (curType == 'script') {");
+    builder.addLine("              if (readyState == 'complete') {");
     builder.addLine("            else if (curType == 'style') {");
     builder.addLine("              if (curModExtra == 'background-image') {");
     builder.addLine("                if (newData.startsWith('url')) {");
@@ -8033,7 +7994,6 @@ Possible variable if
     builder.addLine("      if (!changesObj.hasOwnProperty(keyValue))");
     builder.addLine("      if (changesValue == null)");
     builder.addLine("        if (keyValue == 'class') {");
-    	if (mod.getType() != HDLmModTypes.SCRIPT)
     	if (mod.getType() != HDLmModTypes.SCRIPT)
     builder.addLine("    if (!curNode.hasAttributes())");
     builder.addLine("      if (outputStr != '')");
@@ -8134,9 +8094,14 @@ Possible variable if
     builder.addLine("    if (event.key == 'i' && event.ctrlKey == true)");
     builder.addLine("    if (event.key == 'm' && event.ctrlKey == true)");
     builder.addLine("    if (event.key == 'q' && event.ctrlKey == true)");
+    builder.addLine("    if (event.key == 'x' && event.ctrlKey == true)");
     builder.addLine("    if (sessionStorage.getItem('HDLmSessionDebugRulesEnabled') == 'true')");
     builder.addLine("    if (sessionStorage.getItem('HDLmSessionDebugNodeIdenEnabled') == 'all')");
     builder.addLine("    if (sessionStorage.getItem('HDLmSessionPostRuleTracingEnabled') == 'true')");
+    builder.addLine("      if (curMod.prob < 100.0) {");
+    builder.addLine("        if (ignoreProbability == null)");
+    builder.addLine("        if (localRandomValue * 100.0 > curMod.prob &&");
+    builder.addLine("          if (postRuleTracing == true) {");
     builder.addLine("      if (curMod.enabled != true) {");
     builder.addLine("        if (postRuleTracing == true) {");
     builder.addLine("      if (curMod.pathre === true) {");
@@ -8224,7 +8189,8 @@ Possible variable if
     builder.addLine("              if (HDLmCompareCaseInsensitive(newText, 'yes'))");
     builder.addLine("            else if (curType == 'replace') {");
     builder.addLine("              if (newText != '') {");
-    builder.addLine("            else if (curType == 'script' && readyState == 'complete') {");
+    builder.addLine("            else if (curType == 'script') {");
+    builder.addLine("              if (readyState == 'complete') {");
     builder.addLine("            else if (curType == 'style') {");
     builder.addLine("              if (curModExtra == 'background-image') {");
     builder.addLine("                if (newData.startsWith('url')) {");
@@ -8457,7 +8423,6 @@ Possible variable if
     builder.addLine("      if (changesValue == null)");
     builder.addLine("        if (keyValue == 'class') {");
     	if (mod.getType() != HDLmModTypes.SCRIPT)
-    	if (mod.getType() != HDLmModTypes.SCRIPT)
     builder.addLine("    if (!curNode.hasAttributes())");
     builder.addLine("      if (outputStr != '')");
 		if (!indexJsonArray.isJsonArray()) {
@@ -8541,6 +8506,15 @@ Possible variable if
         else if (curChar == '\u1037')  
         else if (curChar == '\u1038')  
         else if (curChar == '\u1039')  
+Possible variable ignoreProbability
+    builder.addLine("        let ignoreProbability = sessionStorage.getItem('HDLmSessionIgnoreProbability');");
+    builder.addLine("        if (ignoreProbability == null)");
+    builder.addLine("          ignoreProbability = 'false';");
+    builder.addLine("            ignoreProbability != 'true') {");
+    builder.addLine("        let ignoreProbability = sessionStorage.getItem('HDLmSessionIgnoreProbability');");
+    builder.addLine("        if (ignoreProbability == null)");
+    builder.addLine("          ignoreProbability = 'false';");
+    builder.addLine("            ignoreProbability != 'true') {");
 Possible variable image
     builder.addLine("        case 'image':");
     builder.addLine("            else if (curType == 'image') {");
@@ -8628,8 +8602,6 @@ Possible variable int
         int   valueCount = mod.getValues().size();
         for (int i = 0; i < valueCount; i++) {
           for (int j = 0; j < curValues.size(); j++) {
-    	int   valueCount = mod.getValues().size();
-	  	for (int i = 0; i < valueCount; i++) {
     int   indexJsonArraySize = indexJsonArray.size();
     for (int i=0; i < indexJsonArraySize; i++) {
     		int         rulesJsonArraySize = rulesJsonArray.size();
@@ -8646,8 +8618,6 @@ Possible variable int
         int   valueCount = mod.getValues().size();
         for (int i = 0; i < valueCount; i++) {
           for (int j = 0; j < curValues.size(); j++) {
-    	int   valueCount = mod.getValues().size();
-	  	for (int i = 0; i < valueCount; i++) {
     int   indexJsonArraySize = indexJsonArray.size();
     for (int i=0; i < indexJsonArraySize; i++) {
     		int         rulesJsonArraySize = rulesJsonArray.size();
@@ -8827,6 +8797,9 @@ Possible variable let
     builder.addLine("    let matchModifiedName = hostNameValue + '/' + divisionNameValue + '/' + siteNameValue + '/' + curMod.name");
     builder.addLine("    let curType = curMod.type;");
     builder.addLine("      let postTrace = new Object();");
+    builder.addLine("        let localRandomValue = Math.random();");
+    builder.addLine("        let ignoreProbability = sessionStorage.getItem('HDLmSessionIgnoreProbability');");
+    builder.addLine("            let localUpdates = new Object();");
     builder.addLine("          let localUpdates = new Object();");
     builder.addLine("      let matchRes;");
     builder.addLine("      let matchRe;");
@@ -8913,7 +8886,7 @@ Possible variable let
     builder.addLine("                let parentNode = curNode.parentNode;");
     builder.addLine("                let newNodeObj = JSON.parse(newText);");
     builder.addLine("                let newNode = HDLmBuildNodeFromObject(newNodeObj);");
-    builder.addLine("              let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
+    builder.addLine("                let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
     builder.addLine("                let newData = newText;");
     builder.addLine("                  let finalUrl = HDLmGetBackground(curNode, 'junk.jpg');");
     builder.addLine("                let curModSplit = HDLmStyleSplitString(curModExtra);");
@@ -9169,8 +9142,6 @@ Possible variable let
     builder.addLine("    let errorStr = '';");
     builder.addLine("    let changesObj = JSON.parse(jsonText);");
     builder.addLine("      let changesValue = changesObj[keyValue];");
-      newLine = "            let errorText = \"Invalid choice value - \" + choiceNumber" + ";";
-      newLine = "        let errorText = \"Invalid rule name value - \" + modName;";
     builder.addLine("    let outputStr = '';");
     builder.addLine("    let attrs = curNode.attributes;");
     builder.addLine("    let attrsLength = attrs.length;");
@@ -9212,6 +9183,9 @@ Possible variable let
     builder.addLine("    let matchModifiedName = hostNameValue + '/' + divisionNameValue + '/' + siteNameValue + '/' + curMod.name");
     builder.addLine("    let curType = curMod.type;");
     builder.addLine("      let postTrace = new Object();");
+    builder.addLine("        let localRandomValue = Math.random();");
+    builder.addLine("        let ignoreProbability = sessionStorage.getItem('HDLmSessionIgnoreProbability');");
+    builder.addLine("            let localUpdates = new Object();");
     builder.addLine("          let localUpdates = new Object();");
     builder.addLine("      let matchRes;");
     builder.addLine("      let matchRe;");
@@ -9298,7 +9272,7 @@ Possible variable let
     builder.addLine("                let parentNode = curNode.parentNode;");
     builder.addLine("                let newNodeObj = JSON.parse(newText);");
     builder.addLine("                let newNode = HDLmBuildNodeFromObject(newNodeObj);");
-    builder.addLine("              let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
+    builder.addLine("                let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex;");
     builder.addLine("                let newData = newText;");
     builder.addLine("                  let finalUrl = HDLmGetBackground(curNode, 'junk.jpg');");
     builder.addLine("                let curModSplit = HDLmStyleSplitString(curModExtra);");
@@ -9554,8 +9528,6 @@ Possible variable let
     builder.addLine("    let errorStr = '';");
     builder.addLine("    let changesObj = JSON.parse(jsonText);");
     builder.addLine("      let changesValue = changesObj[keyValue];");
-      newLine = "            let errorText = \"Invalid choice value - \" + choiceNumber" + ";";
-      newLine = "        let errorText = \"Invalid rule name value - \" + modName;";
     builder.addLine("    let outputStr = '';");
     builder.addLine("    let attrs = curNode.attributes;");
     builder.addLine("    let attrsLength = attrs.length;");
@@ -9596,6 +9568,11 @@ Possible variable link
     builder.addLine("  function HDLmGetJsonForLink(link, hostName, pathName, sessionId) {");
     builder.addLine("    let rv = '{\"link\":\"' + link + '\"' + ',\"hostName\":\"' + hostName + '\"' + ',\"pathName\":\"' + pathName + '\"';");
     builder.addLine("    let rv = '{\"link\":\"' + link + '\"' + ',\"hostName\":\"' + hostName + '\"' + ',\"pathName\":\"' + pathName + '\"';");
+Possible variable localRandomValue
+    builder.addLine("        let localRandomValue = Math.random();");
+    builder.addLine("        if (localRandomValue * 100.0 > curMod.prob &&");
+    builder.addLine("        let localRandomValue = Math.random();");
+    builder.addLine("        if (localRandomValue * 100.0 > curMod.prob &&");
 Possible variable location
     builder.addLine("    let hostNameStr = location.hostname;");
     builder.addLine("    let linkStr = location.href;");
@@ -9648,20 +9625,12 @@ Possible variable mod
         int   valueCount = mod.getValues().size();
           String  curValue = mod.getValues().get(i);
     for (HDLmMod mod: mods) {
-    	if (mod.getType() != HDLmModTypes.SCRIPT)
-    	String  curModName = mod.getName();
-    	int   valueCount = mod.getValues().size();
-    for (HDLmMod mod: mods) {
       newLine += mod.getJsonSpecialSerializeNulls();
     for (HDLmMod mod: mods) {
     	if (mod.getType() != HDLmModTypes.SCRIPT)
     	String  newName = HDLmMod.replaceInString(mod.getName());
         int   valueCount = mod.getValues().size();
           String  curValue = mod.getValues().get(i);
-    for (HDLmMod mod: mods) {
-    	if (mod.getType() != HDLmModTypes.SCRIPT)
-    	String  curModName = mod.getName();
-    	int   valueCount = mod.getValues().size();
 Possible variable modification
     builder.addLine("          let errorText = \"Invalid modification type value - \" + curType;");
     builder.addLine("        errorStr = HDLmUpdateJsonStr(errorStr, 'modification', nameStr);");
@@ -9684,13 +9653,11 @@ Possible variable mods
     int         modsCount = mods.size(); 
     for (HDLmMod mod: mods) {
     for (HDLmMod mod: mods) {
-    for (HDLmMod mod: mods) {
                                     ArrayList<HDLmMod> mods, 
 		if (mods == null) {
     if (mods.size() == 0 &&
     		mods.size() != 0)
     int         modsCount = mods.size(); 
-    for (HDLmMod mod: mods) {
     for (HDLmMod mod: mods) {
     for (HDLmMod mod: mods) {
 Possible variable modsCount
@@ -9715,7 +9682,6 @@ Possible variable name
     builder.addLine("    errorText += \"name (\";");
     builder.addLine("      case 'name': {");
     builder.addLine("          postTrace.nodegetby = 'name';");
-      newLine = "        let errorText = \"Invalid rule name value - \" + modName;";
 		  String  errorText = "Host name string passed to getJsBuildJs is null";
 		  String  errorText = "Division name string passed to getJsBuildJs is null";
 		  String  errorText = "Site name string passed to getJsBuildJs is null";
@@ -9724,7 +9690,6 @@ Possible variable name
     builder.addLine("    errorText += \"name (\";");
     builder.addLine("      case 'name': {");
     builder.addLine("          postTrace.nodegetby = 'name';");
-      newLine = "        let errorText = \"Invalid rule name value - \" + modName;";
 Possible variable new
       throw new NullPointerException(errorText);
       throw new NullPointerException(errorText);
@@ -9736,6 +9701,7 @@ Possible variable new
       throw new NullPointerException(errorText);
     builder = new HDLmBuildLines("JS");
     builder.addLine("      let postTrace = new Object();");
+    builder.addLine("            let localUpdates = new Object();");
     builder.addLine("          let localUpdates = new Object();");
     builder.addLine("        matchRe = new RegExp(curMod.path.substr(2, curModLen-3));");
     builder.addLine("          let localUpdates = new Object();");
@@ -9775,6 +9741,7 @@ Possible variable new
       throw new NullPointerException(errorText);
     builder = new HDLmBuildLines("JS");
     builder.addLine("      let postTrace = new Object();");
+    builder.addLine("            let localUpdates = new Object();");
     builder.addLine("          let localUpdates = new Object();");
     builder.addLine("        matchRe = new RegExp(curMod.path.substr(2, curModLen-3));");
     builder.addLine("          let localUpdates = new Object();");
@@ -9814,42 +9781,6 @@ Possible variable newLine
           builder.addLine(newLine);
           newLine = "  }";
           builder.addLine(newLine);
-    newLine = "  function HDLmExecuteSwitch(modName, choiceNumber) {";
-		builder.addLine(newLine);
-    newLine = "    switch (modName) {";
-		builder.addLine(newLine);
-      newLine = "      case '" + curModName + "':";
-		  builder.addLine(newLine);
-      newLine = "        switch (choiceNumber) {";
-		  builder.addLine(newLine);
-      newLine = "          case " + i + ":";
-		  builder.addLine(newLine);
-        newLine = "            HDLmExecute" + curModNameInternal + i + "();";
-		    builder.addLine(newLine);
-        newLine = "            break;";
-		    builder.addLine(newLine);
-      newLine = "          default:";
-	  	builder.addLine(newLine);
-      newLine = "            let errorText = \"Invalid choice value - \" + choiceNumber" + ";";
-  		builder.addLine(newLine);
-      newLine = "            HDLmBuildError('Error', 'Choice', 63, errorText);";
-	  	builder.addLine(newLine);
-      newLine = "            break;";
-	  	builder.addLine(newLine);
-      newLine = "        }";
-	  	builder.addLine(newLine);
-      newLine = "      default:";
-	  	builder.addLine(newLine);
-      newLine = "        let errorText = \"Invalid rule name value - \" + modName;";
-  		builder.addLine(newLine);
-      newLine = "        HDLmBuildError('Error', 'RuleName', 62, errorText);";
-	  	builder.addLine(newLine);
-      newLine = "        break;";
-	  	builder.addLine(newLine);
-    newLine = "    }";
-		builder.addLine(newLine);
-    newLine = "  }";
-		builder.addLine(newLine);
           newLine = " ".repeat(23);
           newLine += "'"; 
           newLine += ruleName;
@@ -9880,42 +9811,6 @@ Possible variable newLine
           builder.addLine(newLine);
           newLine = "  }";
           builder.addLine(newLine);
-    newLine = "  function HDLmExecuteSwitch(modName, choiceNumber) {";
-		builder.addLine(newLine);
-    newLine = "    switch (modName) {";
-		builder.addLine(newLine);
-      newLine = "      case '" + curModName + "':";
-		  builder.addLine(newLine);
-      newLine = "        switch (choiceNumber) {";
-		  builder.addLine(newLine);
-      newLine = "          case " + i + ":";
-		  builder.addLine(newLine);
-        newLine = "            HDLmExecute" + curModNameInternal + i + "();";
-		    builder.addLine(newLine);
-        newLine = "            break;";
-		    builder.addLine(newLine);
-      newLine = "          default:";
-	  	builder.addLine(newLine);
-      newLine = "            let errorText = \"Invalid choice value - \" + choiceNumber" + ";";
-  		builder.addLine(newLine);
-      newLine = "            HDLmBuildError('Error', 'Choice', 63, errorText);";
-	  	builder.addLine(newLine);
-      newLine = "            break;";
-	  	builder.addLine(newLine);
-      newLine = "        }";
-	  	builder.addLine(newLine);
-      newLine = "      default:";
-	  	builder.addLine(newLine);
-      newLine = "        let errorText = \"Invalid rule name value - \" + modName;";
-  		builder.addLine(newLine);
-      newLine = "        HDLmBuildError('Error', 'RuleName', 62, errorText);";
-	  	builder.addLine(newLine);
-      newLine = "        break;";
-	  	builder.addLine(newLine);
-    newLine = "    }";
-		builder.addLine(newLine);
-    newLine = "  }";
-		builder.addLine(newLine);
           newLine = " ".repeat(23);
           newLine += "'"; 
           newLine += ruleName;
@@ -10011,6 +9906,12 @@ Possible variable null
     if (serverName == null) {
 		  String  errorText = "Server name string passed to getJsBuildJs is null";
     String          fixedJSName = null;
+    builder.addLine("        if (ignoreProbability == null)");
+    builder.addLine("            HDLmSaveChange(localUpdates, null,");
+    builder.addLine("                          null, null,");
+    builder.addLine("                          null, null,");
+    builder.addLine("                          curMod.path, curMod.type, pathValueStr, null, null);");
+    builder.addLine("                          curMod.path, curMod.type, pathValueStr, null, null);");
     builder.addLine("          HDLmSaveChange(localUpdates, null,");
     builder.addLine("                         null, null,");
     builder.addLine("                         null, null,");
@@ -10177,6 +10078,12 @@ Possible variable null
     if (serverName == null) {
 		  String  errorText = "Server name string passed to getJsBuildJs is null";
     String          fixedJSName = null;
+    builder.addLine("        if (ignoreProbability == null)");
+    builder.addLine("            HDLmSaveChange(localUpdates, null,");
+    builder.addLine("                          null, null,");
+    builder.addLine("                          null, null,");
+    builder.addLine("                          curMod.path, curMod.type, pathValueStr, null, null);");
+    builder.addLine("                          curMod.path, curMod.type, pathValueStr, null, null);");
     builder.addLine("          HDLmSaveChange(localUpdates, null,");
     builder.addLine("                         null, null,");
     builder.addLine("                         null, null,");
@@ -10435,6 +10342,9 @@ Possible variable private
 	private HDLmBuildJs() {}
   private static final Logger LOG = LoggerFactory.getLogger(HDLmBuildJs.class);
 	private HDLmBuildJs() {}
+Possible variable probability
+    builder.addLine("          matchError = 'probability';");
+    builder.addLine("          matchError = 'probability';");
 Possible variable prop
     builder.addLine("    objProps.forEach(prop => {");
     builder.addLine("      let objValue = obj[prop];");
@@ -10634,9 +10544,7 @@ Possible variable returned
     builder.addLine("      let   errorText = `Node identifier - get for (${nodeText}) returned (${nodeElementsLength}) nodes`;");
 Possible variable rule
 		  String  errorText = "Log rule matching reference passed to getJsBuildJs is null";
-      newLine = "        let errorText = \"Invalid rule name value - \" + modName;";
 		  String  errorText = "Log rule matching reference passed to getJsBuildJs is null";
-      newLine = "        let errorText = \"Invalid rule name value - \" + modName;";
 Possible variable ruleJsonElement
         	JsonElement   ruleJsonElement = rulesJsonArray.get(j);
       		if (!ruleJsonElement.isJsonPrimitive()) {
@@ -10741,7 +10649,7 @@ Possible variable script
     builder.addLine("        case 'script':");
     builder.addLine("            else if (curType == 'script') {");
     builder.addLine("            else if (curType == 'script') {");
-    builder.addLine("            else if (curType == 'script' && readyState == 'complete') {");
+    builder.addLine("            else if (curType == 'script') {");
     builder.addLine("</script>");
       return "<script></script>";
       return "<script></script>";
@@ -10749,7 +10657,7 @@ Possible variable script
     builder.addLine("        case 'script':");
     builder.addLine("            else if (curType == 'script') {");
     builder.addLine("            else if (curType == 'script') {");
-    builder.addLine("            else if (curType == 'script' && readyState == 'complete') {");
+    builder.addLine("            else if (curType == 'script') {");
     builder.addLine("</script>");
 Possible variable secure
     builder.addLine("            let   errorText = `No secure host name for (${hostNameValue})`;");
@@ -10793,6 +10701,7 @@ Possible variable sessionId
     builder.addLine("        errorStr = HDLmUpdateJsonStr(errorStr, 'sessionId', sessionIdJS);");
 Possible variable sessionIndexValue
     builder.addLine("                        sessionIndexValue,");
+    builder.addLine("                          sessionIndexValue, parametersArray, sessionIdJS,");
     builder.addLine("                         sessionIndexValue, parametersArray, sessionIdJS,");
     builder.addLine("                         sessionIndexValue, parametersArray, sessionIdJS,");
     builder.addLine("        lookupValue = sessionIndexValue;");
@@ -10820,6 +10729,7 @@ Possible variable sessionIndexValue
     	sessionIndexValue = Double.parseDouble(sessionIndexStr);    	 
          	double      indexValue = sessionIndexValue * choicesJsonArraySize;
     builder.addLine("                        sessionIndexValue,");
+    builder.addLine("                          sessionIndexValue, parametersArray, sessionIdJS,");
     builder.addLine("                         sessionIndexValue, parametersArray, sessionIdJS,");
     builder.addLine("                         sessionIndexValue, parametersArray, sessionIdJS,");
     builder.addLine("        lookupValue = sessionIndexValue;");
@@ -10923,24 +10833,28 @@ Possible variable sessionStorage
     builder.addLine("      sessionStorage.setItem(\"HDLmSessionDebugRulesEnabled\", 'true');");
     builder.addLine("      sessionStorage.setItem(\"HDLmSessionDebugNodeIdenEnabled\", 'all');");
     builder.addLine("      sessionStorage.setItem(\"HDLmSessionPostRuleTracingEnabled\", 'true');");
+    builder.addLine("      sessionStorage.setItem(\"HDLmSessionIgnoreProbability\", 'true');");
     builder.addLine("    sessionStorage.setItem(\"HDLmSessionRuleInfoHostName\", hostNameValue);");
     builder.addLine("    sessionStorage.setItem(\"HDLmSessionRuleInfoDivisionName\", divisionNameValue);");
     builder.addLine("    sessionStorage.setItem(\"HDLmSessionRuleInfoSiteName\", siteNameValue);");
     builder.addLine("    if (sessionStorage.getItem('HDLmSessionDebugRulesEnabled') == 'true')");
     builder.addLine("    if (sessionStorage.getItem('HDLmSessionDebugNodeIdenEnabled') == 'all')");
     builder.addLine("    if (sessionStorage.getItem('HDLmSessionPostRuleTracingEnabled') == 'true')");
+    builder.addLine("        let ignoreProbability = sessionStorage.getItem('HDLmSessionIgnoreProbability');");
     builder.addLine("    var disabledStatus = sessionStorage.getItem(styleTitle + 'Disabled');");
     builder.addLine("    disabledStatus = sessionStorage.getItem(titleValue + 'Disabled');");
     builder.addLine("    sessionStorage.setItem(titleValue + 'Disabled', disabledStatus);");
     builder.addLine("      sessionStorage.setItem(\"HDLmSessionDebugRulesEnabled\", 'true');");
     builder.addLine("      sessionStorage.setItem(\"HDLmSessionDebugNodeIdenEnabled\", 'all');");
     builder.addLine("      sessionStorage.setItem(\"HDLmSessionPostRuleTracingEnabled\", 'true');");
+    builder.addLine("      sessionStorage.setItem(\"HDLmSessionIgnoreProbability\", 'true');");
     builder.addLine("    sessionStorage.setItem(\"HDLmSessionRuleInfoHostName\", hostNameValue);");
     builder.addLine("    sessionStorage.setItem(\"HDLmSessionRuleInfoDivisionName\", divisionNameValue);");
     builder.addLine("    sessionStorage.setItem(\"HDLmSessionRuleInfoSiteName\", siteNameValue);");
     builder.addLine("    if (sessionStorage.getItem('HDLmSessionDebugRulesEnabled') == 'true')");
     builder.addLine("    if (sessionStorage.getItem('HDLmSessionDebugNodeIdenEnabled') == 'all')");
     builder.addLine("    if (sessionStorage.getItem('HDLmSessionPostRuleTracingEnabled') == 'true')");
+    builder.addLine("        let ignoreProbability = sessionStorage.getItem('HDLmSessionIgnoreProbability');");
     builder.addLine("    var disabledStatus = sessionStorage.getItem(styleTitle + 'Disabled');");
     builder.addLine("    disabledStatus = sessionStorage.getItem(titleValue + 'Disabled');");
     builder.addLine("    sessionStorage.setItem(titleValue + 'Disabled', disabledStatus);");
@@ -11041,14 +10955,10 @@ Possible variable switch
     builder.addLine("      switch (keyValue) {");
     builder.addLine("    switch (nodeType) {");
     builder.addLine("        switch (curMod.type) {");
-    newLine = "    switch (modName) {";
-      newLine = "        switch (choiceNumber) {";
     builder.addLine("      switch (curType) {");
     builder.addLine("      switch (keyValue) {");
     builder.addLine("    switch (nodeType) {");
     builder.addLine("        switch (curMod.type) {");
-    newLine = "    switch (modName) {";
-      newLine = "        switch (choiceNumber) {";
 Possible variable tag
     builder.addLine("      case 'tag': {");
     builder.addLine("          postTrace.nodegetby = 'tag';");
@@ -11141,11 +11051,15 @@ Possible variable true
     builder.addLine("    if (event.key == 'm' && event.ctrlKey == true)");
     builder.addLine("    if (event.key == 'q' && event.ctrlKey == true)");
     builder.addLine("      sessionStorage.setItem(\"HDLmSessionPostRuleTracingEnabled\", 'true');");
+    builder.addLine("    if (event.key == 'x' && event.ctrlKey == true)");
+    builder.addLine("      sessionStorage.setItem(\"HDLmSessionIgnoreProbability\", 'true');");
     builder.addLine("    if (sessionStorage.getItem('HDLmSessionDebugRulesEnabled') == 'true')");
     builder.addLine("      logRuleMatching = true;");
     builder.addLine("    if (sessionStorage.getItem('HDLmSessionPostRuleTracingEnabled') == 'true')");
     builder.addLine("      postRuleTracing = true;");
     builder.addLine("    while (true) {");
+    builder.addLine("            ignoreProbability != 'true') {");
+    builder.addLine("          if (postRuleTracing == true) {");
     builder.addLine("      if (curMod.enabled != true) {");
     builder.addLine("        if (postRuleTracing == true) {");
     builder.addLine("      if (curMod.pathre === true) {");
@@ -11204,11 +11118,15 @@ Possible variable true
     builder.addLine("    if (event.key == 'm' && event.ctrlKey == true)");
     builder.addLine("    if (event.key == 'q' && event.ctrlKey == true)");
     builder.addLine("      sessionStorage.setItem(\"HDLmSessionPostRuleTracingEnabled\", 'true');");
+    builder.addLine("    if (event.key == 'x' && event.ctrlKey == true)");
+    builder.addLine("      sessionStorage.setItem(\"HDLmSessionIgnoreProbability\", 'true');");
     builder.addLine("    if (sessionStorage.getItem('HDLmSessionDebugRulesEnabled') == 'true')");
     builder.addLine("      logRuleMatching = true;");
     builder.addLine("    if (sessionStorage.getItem('HDLmSessionPostRuleTracingEnabled') == 'true')");
     builder.addLine("      postRuleTracing = true;");
     builder.addLine("    while (true) {");
+    builder.addLine("            ignoreProbability != 'true') {");
+    builder.addLine("          if (postRuleTracing == true) {");
     builder.addLine("      if (curMod.enabled != true) {");
     builder.addLine("        if (postRuleTracing == true) {");
     builder.addLine("      if (curMod.pathre === true) {");
@@ -11747,6 +11665,9 @@ Possible variable undefined
 Possible variable unknown
     builder.addLine("  const readyState = 'unknown';");
     builder.addLine("  const readyState = 'unknown';");
+Possible variable unused
+  @SuppressWarnings("unused")
+  @SuppressWarnings("unused")
 Possible variable updates
     builder.addLine("    if (!savedUpdates.hasOwnProperty('updates'))");
     builder.addLine("    if (!savedUpdates.hasOwnProperty('updates'))");
@@ -11782,8 +11703,6 @@ Possible variable value
     builder.addLine("          let errorText = \"Invalid modification type value - \" + curType;");
     builder.addLine("      errorText += \" value (\";");
     builder.addLine("        let errorText = \"Invalid node identifier type value - \" + nodeType;");
-      newLine = "            let errorText = \"Invalid choice value - \" + choiceNumber" + ";";
-      newLine = "        let errorText = \"Invalid rule name value - \" + modName;";
       			HDLmAssert.HDLmAssertAction(false, "JSON element is not a JSON primitive value");
         			HDLmAssert.HDLmAssertAction(false, "JSON element is not a JSON primitive value");
 	    String  value = entry.getValue();
@@ -11805,8 +11724,6 @@ Possible variable value
     builder.addLine("              errorText = `Node identifier - key (perceptual hash) comparison value (${nodeAttributesPHashSimilarity})`;");
     builder.addLine("              errorText = `Node identifier - key (${nodeAttributeKey}) comparison value (${traceValue})`;");
     builder.addLine("            errorText = `Node identifier - key (${nodeAttributeKey}) comparison value (${traceValue})`;");
-      newLine = "            let errorText = \"Invalid choice value - \" + choiceNumber" + ";";
-      newLine = "        let errorText = \"Invalid rule name value - \" + modName;";
       			HDLmAssert.HDLmAssertAction(false, "JSON element is not a JSON primitive value");
         			HDLmAssert.HDLmAssertAction(false, "JSON element is not a JSON primitive value");
 	    String  value = entry.getValue();
@@ -11814,12 +11731,8 @@ Possible variable value
 Possible variable valueCount
         int   valueCount = mod.getValues().size();
         for (int i = 0; i < valueCount; i++) {
-    	int   valueCount = mod.getValues().size();
-	  	for (int i = 0; i < valueCount; i++) {
         int   valueCount = mod.getValues().size();
         for (int i = 0; i < valueCount; i++) {
-    	int   valueCount = mod.getValues().size();
-	  	for (int i = 0; i < valueCount; i++) {
 Possible variable var
     builder.addLine("    var styleTitle = 'HDLmSessionClasses';");
     builder.addLine("    var styleVar = document.createElement('style');");
@@ -11845,9 +11758,11 @@ Possible variable visit
     builder.addLine("      if (nodeListLength == 0 && curType != 'visit') {");
     builder.addLine("        case 'visit': {");
     builder.addLine("        case 'visit': {");
+    builder.addLine("    postTrace.matcherror = 'visit';");
     builder.addLine("      if (nodeListLength == 0 && curType != 'visit') {");
     builder.addLine("        case 'visit': {");
     builder.addLine("        case 'visit': {");
+    builder.addLine("    postTrace.matcherror = 'visit';");
 Possible variable website
     	String  jsonHostName = HDLmJson.getJsonString(indexJsonElement, "website");
         "    \"website\":" +
@@ -11887,7 +11802,7 @@ Possible variable width
     builder.addLine("                     curType == 'width') {");
     builder.addLine("                     curType == 'width') {");
 Possible variable window
-    builder.addLine("              window[functionStr]();");
+    builder.addLine("                window[functionStr]();");
     builder.addLine("      let computedStyle = window.getComputedStyle(domElement);");
     builder.addLine("    if (isNaN(window[updateName]))");
     builder.addLine("      window[updateName] = 0;");
@@ -11895,7 +11810,7 @@ Possible variable window
     builder.addLine("    window[updateName] += 1;");
     builder.addLine("    Object.keys(window).forEach(key => {"); 
     builder.addLine("        window.addEventListener(key.slice(2), event => {");  
-    builder.addLine("              window[functionStr]();");
+    builder.addLine("                window[functionStr]();");
     builder.addLine("      let computedStyle = window.getComputedStyle(domElement);");
     builder.addLine("    if (isNaN(window[updateName]))");
     builder.addLine("      window[updateName] = 0;");
@@ -11911,7 +11826,9 @@ Possible variable www
     builder.addLine("    if (document.location.hostname == 'www.themarvelouslandofoz.com' &&");
         "      \"www.yogadirect.com\"," +
 Possible variable x
+    builder.addLine("    if (event.key == 'x' && event.ctrlKey == true)");
     builder.addLine("    httpReq.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');");
+    builder.addLine("    if (event.key == 'x' && event.ctrlKey == true)");
     builder.addLine("    httpReq.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');");
 Possible variable yellow
                                       "'background-color: yellow');");

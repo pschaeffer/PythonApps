@@ -18,6 +18,8 @@ document.addEventListener("keydown", event => {
     HDLmToggleStyleSheetEnablement();
   if (event.key == 'q' && event.ctrlKey == true) 
     sessionStorage.setItem("HDLmSessionPostRuleTracingEnabled", 'true');
+  if (event.key == 'x' && event.ctrlKey == true) 
+    sessionStorage.setItem("HDLmSessionIgnoreProbability", 'true');
 });
 /* Start the JavaScript function that applies just one modification */
 function HDLmApplyMod(pathValueStr, 
@@ -72,6 +74,33 @@ function HDLmApplyMod(pathValueStr,
   while (true) {
     let postTrace = new Object(); 
     /* console.log('s2'); */
+    /* Check if the current modification should be skipped because
+       of probability. This check is skipped if the probability is
+       100.0. */
+    if (curMod.prob < 100.0) {
+      /* console.log('Probability is less than 100.0'); */
+      let localRandomValue = Math.random();
+      let ignoreProbability = sessionStorage.getItem('HDLmSessionIgnoreProbability');
+      if (ignoreProbability == null)
+        ignoreProbability = 'false';
+      if (localRandomValue * 100.0 > curMod.prob &&
+          ignoreProbability != 'true') {
+        matchError = 'probability'; 
+        /* Report that the current rule was skipped because
+           of probability */
+        if (postRuleTracing == true) {
+          let localUpdates = new Object();        
+          HDLmSaveChange(localUpdates, null,
+                        sessionIndexValue, parametersArray, sessionIdJS, 
+                        null, null, 
+                        hostNameValue, divisionNameValue, siteNameValue, curMod.name,
+                        curMod.path, curMod.type, pathValueStr, null, null); 
+          postTrace.matcherror = matchError;
+          HDLmSendUpdates(localUpdates, 'failure', '1.0', postTrace);
+        }
+        break;
+      }
+    }    
     /* If the current modification is not enabled, then we really
        don't have any more work to do */
     if (curMod.enabled != true) {
@@ -560,6 +589,7 @@ function HDLmApplyMod(pathValueStr,
         }
         /* Process all of the matching nodes */
         for (let i = 0; i < nodeListLength; i++) {
+          matchError = 'Fired';
           /* Get a single node and add a class or classes to the node */
           let curNode = nodeList[i];
           let curModExtra = curMod.extra;
@@ -801,10 +831,13 @@ function HDLmApplyMod(pathValueStr,
               parentNode.replaceChild(newNode, curNode);
             } 
           }
-          else if (curType == 'script' && readyState == 'complete') {
-            let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex; 
-            /* console.log('Show function string for script', functionStr); */
-            window[functionStr](); 
+          else if (curType == 'script') {
+            if (readyState == 'complete') {
+              let functionStr = 'HDLmExecute' + HDLmReplaceInString(curMod.name) + finalLookupIndex; 
+              /* console.log('Show function string for script', functionStr); */
+              window[functionStr]();
+            }
+            matchError = readyState;
           }
           /* Most style values are handled by just setting the style. 
              However, we need a somewhat different approach for 
@@ -857,7 +890,7 @@ function HDLmApplyMod(pathValueStr,
                          hostNameValue, divisionNameValue, siteNameValue, curMod.name,
                          curMod.path, curMod.type, pathValueStr, 
                          oldText, newText);
-          postTrace.matcherror = 'fired';
+          postTrace.matcherror = matchError;
           HDLmSendUpdates(localUpdates, curType, '1.0', postTrace);  
           break;
         }
@@ -2545,7 +2578,7 @@ function HDLmHandleVisitRequest(visitText, postTrace, testFlag, sessionIndexValu
                  oldText, newText);
   /* Set the local reason value to something appropriate */
   let localReason = curMod.type;
-  postTrace.matcherror = 'fired';
+  postTrace.matcherror = 'visit';
   HDLmSendUpdates(localUpdates, localReason, '1.0', postTrace);
   return countHigh;
 }

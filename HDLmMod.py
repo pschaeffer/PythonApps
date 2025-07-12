@@ -42,6 +42,12 @@ HDLmModInfoData = \
                            "subtype":       "extraAttribute"
                          },
                          {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
+                         {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
 													 "fieldtype":     "usemode",
@@ -123,6 +129,12 @@ HDLmModInfoData = \
                            "fieldtype":     "extrainfo",
                            "subtype":       "extra"
                          },
+                         {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
                          {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
@@ -219,6 +231,12 @@ HDLmModInfoData = \
                            "subtype":       "extra"
                          },
                          {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
+                         {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
 													 "fieldtype":     "usemode",
@@ -314,6 +332,12 @@ HDLmModInfoData = \
                            "subtype":       "extra"
                          },
                          {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
+                         {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
 													 "fieldtype":     "usemode",
@@ -395,6 +419,12 @@ HDLmModInfoData = \
                            "fieldtype":     "extrainfo",
                            "subtype":       "extra"
                          },
+                         {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
                          {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
@@ -491,6 +521,12 @@ HDLmModInfoData = \
                            "subtype":       "extra"
                          },
                          {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
+                         {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
 													 "fieldtype":     "usemode",
@@ -585,6 +621,12 @@ HDLmModInfoData = \
                            "fieldtype":     "extrainfo",
                            "subtype":       "extra"
                          },
+                         {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
                          {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
@@ -681,6 +723,12 @@ HDLmModInfoData = \
                            "subtype":       "extra"
                          },
                          {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
+                         {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
 													 "fieldtype":     "usemode",
@@ -775,6 +823,12 @@ HDLmModInfoData = \
                            "fieldtype":     "extrainfo",
                            "subtype":       "extra"
                          },
+                         {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
                          {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
@@ -871,6 +925,12 @@ HDLmModInfoData = \
                            "subtype":       "extra"
                          },
                          {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
+                         {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
 													 "fieldtype":     "usemode",
@@ -965,6 +1025,12 @@ HDLmModInfoData = \
                            "fieldtype":     "extrainfo",
                            "subtype":       "extra"
                          },
+                         {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
                          {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
@@ -1061,6 +1127,12 @@ HDLmModInfoData = \
                            "subtype":       "extra"
                          },
                          {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
+                         {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
 													 "fieldtype":     "usemode",
@@ -1155,6 +1227,12 @@ HDLmModInfoData = \
                            "fieldtype":     "extrainfo",
                            "subtype":       "extra"
                          },
+                         {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
                          {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
@@ -1257,6 +1335,12 @@ HDLmModInfoData = \
                            "fieldtype":     "extrainfo",
                            "subtype":       "extra"
                          },
+                         {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
                          {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
@@ -1378,6 +1462,12 @@ HDLmModInfoData = \
                            "subtype":       "extra"
                          },
                          {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
+                         {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
 													 "fieldtype":     "usemode",
@@ -1466,6 +1556,12 @@ HDLmModInfoData = \
                            "fieldtype":     "extrainfo",
                            "subtype":       "extra"
                          },
+                         {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
                          {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
@@ -1562,6 +1658,12 @@ HDLmModInfoData = \
                            "subtype":       "extra"
                          },
                          {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
+                         {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
 													 "fieldtype":     "usemode",
@@ -1656,6 +1758,12 @@ HDLmModInfoData = \
                            "fieldtype":     "extrainfo",
                            "subtype":       "extra"
                          },
+                         {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
                          {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
@@ -1752,6 +1860,12 @@ HDLmModInfoData = \
                            "subtype":       "extra"
                          },
                          {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
+                         {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
 													 "fieldtype":     "usemode",
@@ -1846,6 +1960,12 @@ HDLmModInfoData = \
                            "fieldtype":     "extrainfo",
                            "subtype":       "extraStyle"
                          },
+                         {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
                          {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
@@ -1942,6 +2062,12 @@ HDLmModInfoData = \
                            "subtype":       "extra"
                          },
                          {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
+                         {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
 													 "fieldtype":     "usemode",
@@ -2037,6 +2163,12 @@ HDLmModInfoData = \
                            "subtype":       "extra"
                          },
                          {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
+                         {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
 													 "fieldtype":     "usemode",
@@ -2131,6 +2263,12 @@ HDLmModInfoData = \
                            "fieldtype":     "extrainfo",
                            "subtype":       "extra"
                          },
+                         {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
                          {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
@@ -2249,6 +2387,12 @@ HDLmModInfoData = \
                            "subtype":       "extra"
                          },
                          {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
+                         {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
 													 "fieldtype":     "usemode",
@@ -2343,6 +2487,12 @@ HDLmModInfoData = \
                            "fieldtype":     "extrainfo",
                            "subtype":       "extra"
                          },
+                         {
+													 "description":   "Probabiltiy",
+													 "source":        "probability",
+													 "fieldtype":     "float",
+													 "subtype":       "probability"
+												 },
                          {
 													 "description":   "Use Mode",
 													 "source":        "usemode",
@@ -2493,7 +2643,6 @@ HDLmModTreeInfo = {
     "ucfirstname": "Company",
     "tooltip":     "Company node"
   },
-
   "config": {
     "longname":    "configuration",
     "ucfirstname": "Configuration",
@@ -2662,7 +2811,7 @@ class HDLmMod(object):
 	  # value match object has methods that handle all types of matching. The
 	  # match object may specify a simple string comparison, a regex match, 
 	  # a glob match, or a like (SQL LIKE) match. 
-    self.pathMatch = None	
+    self.pathmatch = None	
   # Build an HTML modification object from the values passed by the
   # caller 
   @staticmethod

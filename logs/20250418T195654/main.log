@@ -1,0 +1,5 @@
+2025-04-18 19:56:55.448 [info] update#setState idle
+2025-04-18 19:56:57.735 [error] vscode-file: Refused to load resource c:\Users\Peter\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\theme-seti\icons\seti.woff from vscode-file: protocol (original URL: vscode-file://vscode-app/c:/Users/Peter/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/extensions/theme-seti/icons/seti.woff)
+2025-04-18 19:57:25.456 [info] update#setState checking for updates
+2025-04-18 19:57:25.542 [info] update#setState idle
+2025-04-18 19:57:30.854 [info] Extension host with pid 81468 exited with code: 0, signal: unknown.

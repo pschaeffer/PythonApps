@@ -21,7 +21,7 @@ glbInfile = HDLmDefines.getString('HDLMBUILDJSNAME') + '.txt'
 glbJavaFilePath = '../../../../../HeadlampJetty/workspace-4.33.0/ProxyServerA/src/com/headlamp/' 
 glbOutFile = HDLmDefines.getString('HDLMBUILDJSNAME') 
 glbNoMatchFile = 'HDLmNoMatch.txt'
-glbPythonWorkPath = '../PythonApps/PythonApps/'       
+glbPythonWorkPath = '../../PythonApps/PythonApps/'       
 glbVarList = [
              'actualText',             
              'actualTextLower',
@@ -468,6 +468,7 @@ class HDLmBuildJs {
 	/* This class can never be instantiated */
 	private HDLmBuildJs() {}
   /* Build a set of JavaScript and return it to the caller */
+  @SuppressWarnings("unused")
   public static String getJsBuildJs(HDLmProtocolTypes protocol,
                                     String secureHostName, 
                                     String hostName,
@@ -3964,6 +3965,8 @@ def lineUnFixJava(line, quoteChar):
 
 # Change some of the tokens for JavaScript minification
 def minifyChangeTokens(tokVec, changeNames, line, noMatchDict, replaceNames): 
+  if ('case " + i' in line):
+    print(line)
   # Get the number of tokens
   tokVecLen = len(tokVec)
   # Process all of the tokens
@@ -3984,6 +3987,14 @@ def minifyChangeTokens(tokVec, changeNames, line, noMatchDict, replaceNames):
        tokVec[i-4].value == '.'           and \
        tokVec[i-5].value == 'builder':
       numberOfBlanks = 0
+    if curTokType == HDLmTokenTypes.space and \
+       i >= 5                             and \
+       tokVec[i-1].value == '\u1000'      and \
+       tokVec[i-2].value == ''            and \
+       tokVec[i-3].value == '='           and \
+       tokVec[i-4].value == ''            and \
+       tokVec[i-5].value == 'newLine':
+      numberOfBlanks = 0
     # In some cases, we can change multiple blanks into
     # a single blank. This is not possible in all cases.
     if curTokType == HDLmTokenTypes.space     and \
@@ -3994,11 +4005,21 @@ def minifyChangeTokens(tokVec, changeNames, line, noMatchDict, replaceNames):
     # In some cases, we can change any number of blanks
     # into a zero-length string. This is not possible 
     # in all cases.
+    nextToken = None
+    if (tokVecLen > (i+1)):
+      nextToken = tokVec[i+1]
     if curTokType == HDLmTokenTypes.space     and \
        i > 0                                  and \
        tokVec[i-1].value == 'case'            and \
        len(curTok.value) >= 1: 
-      numberOfBlanks = 0
+      # The number of blanks that should come after
+      # as 'case' (without the quotes) depends on 
+      # the next token
+      if (nextToken != None)              and \
+          nextToken.value == '\u1000':
+        numberOfBlanks = 1
+      else:
+        numberOfBlanks = 0
     # Check if the prior token and next token are 
     # parentheses of some kind. Set some values if 
     # this is true. 
@@ -4382,7 +4403,9 @@ def main():
   outData.extend(buildCode(docJavaBuildError))
   outData.extend(buildCode(docJavaChangeAttributes)) 
   outData.extend(buildFunctions())
-  outData.extend(buildSwitches())
+  # The switches built by the call below don't seem
+  # to be in use
+  # outData.extend(buildSwitches())
   outData.extend(buildCode(docJavaGetAttributesString))
   outData.extend(buildCode(docJavaGetLookupIndex))
   outData.extend(buildCode(docJavaGetParametersArray))
